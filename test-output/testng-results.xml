@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[The webpage loads correctly<br>]]>
+    </line>
+    <line>
+      <![CDATA[The account is created<br>]]>
+    </line>
+    <line>
+      <![CDATA[The account logout<br>]]>
+    </line>
+    <line>
+      <![CDATA[Item Resume Showed Correctly  <br>]]>
+    </line>
+    <line>
+      <![CDATA[Summary page displayed <br>]]>
+    </line>
+    <line>
+      <![CDATA[Redirect to the account login <br>]]>
+    </line>
+    <line>
+      <![CDATA[The form appears<br>]]>
+    </line>
+    <line>
+      <![CDATA[Summary page displayed <br>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-06-09T01:39:04 CST" name="Default suite" finished-at="2023-06-09T01:40:12 CST" duration-ms="68018">
+    <groups>
+    </groups>
+    <test started-at="2023-06-09T01:39:04 CST" name="Default test" finished-at="2023-06-09T01:40:12 CST" duration-ms="68018">
+      <class name="tests.TC08_AddCartWithoutAccount">
+        <test-method is-config="true" signature="S000_FirstStep()[pri:0, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:39:04 CST" name="S000_FirstStep" description="Setup the driver" finished-at="2023-06-09T01:39:30 CST" duration-ms="26816" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- S000_FirstStep -->
+        <test-method signature="S001_GoWebpage()[pri:1, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:39:31 CST" name="S001_GoWebpage" description="Go to URL &#039;http://automationpractice.com/index.php&#039;" finished-at="2023-06-09T01:39:34 CST" duration-ms="3139" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The webpage loads correctly<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S001_GoWebpage -->
+        <test-method signature="S002_CreateUser()[pri:2, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:39:34 CST" name="S002_CreateUser" description="Create User" finished-at="2023-06-09T01:39:44 CST" duration-ms="10091" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The account is created<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S002_CreateUser -->
+        <test-method signature="S003_Logout()[pri:3, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:39:44 CST" name="S003_Logout" description="Logout User" finished-at="2023-06-09T01:39:47 CST" duration-ms="3477" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The account logout<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S003_Logout -->
+        <test-method signature="S004_GoProdcuts()[pri:4, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:39:47 CST" name="S004_GoProdcuts" description="Move to Products" finished-at="2023-06-09T01:39:53 CST" duration-ms="5568" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- S004_GoProdcuts -->
+        <test-method signature="S005_GoTshirtPage()[pri:5, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:39:53 CST" name="S005_GoTshirtPage" description="Move your cursor over Women&#039;s link and click on sub menu &#039;T-shirts&#039;" finished-at="2023-06-09T01:39:56 CST" duration-ms="3098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- S005_GoTshirtPage -->
+        <test-method signature="S006_SeeMore()[pri:6, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:39:56 CST" name="S006_SeeMore" description="Click to see more on the product" finished-at="2023-06-09T01:40:00 CST" duration-ms="4453" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Item Resume Showed Correctly  <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S006_SeeMore -->
+        <test-method signature="S007_AddWishList()[pri:7, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:40:00 CST" name="S007_AddWishList" description="Add the product to wishlist" finished-at="2023-06-09T01:40:04 CST" duration-ms="3734" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Summary page displayed <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S007_AddWishList -->
+        <test-method signature="S008_Summary()[pri:8, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:40:04 CST" name="S008_Summary" description="Click proceed to checkout Again" finished-at="2023-06-09T01:40:06 CST" duration-ms="1546" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Redirect to the account login <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S008_Summary -->
+        <test-method signature="S009_Summary()[pri:9, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:40:06 CST" name="S009_Summary" description="Login to proceed to checkout Again" finished-at="2023-06-09T01:40:08 CST" duration-ms="2135" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The form appears<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S009_Summary -->
+        <test-method signature="S010_CartWithLogin()[pri:10, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:40:08 CST" name="S010_CartWithLogin" description="Show the cart" finished-at="2023-06-09T01:40:11 CST" duration-ms="2717" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Summary page displayed <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S010_CartWithLogin -->
+        <test-method is-config="true" signature="LastStep()[pri:0, instance:tests.TC08_AddCartWithoutAccount@54bff557]" started-at="2023-06-09T01:40:11 CST" name="LastStep" finished-at="2023-06-09T01:40:12 CST" duration-ms="1007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LastStep -->
+      </class> <!-- tests.TC08_AddCartWithoutAccount -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
