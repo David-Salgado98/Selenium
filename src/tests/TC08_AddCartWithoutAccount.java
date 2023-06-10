@@ -178,8 +178,8 @@ public class TC08_AddCartWithoutAccount {
 		Reporter.log("Item Resume Showed Correctly  <br>");
 	}
 
-	@Test(description = "Add the product to wishlist", priority = 7)
-	public void S007_AddWishList() throws InterruptedException {
+	@Test(description = "Add the product to Shopping Cart", priority = 7)
+	public void S007_AddToCart() throws InterruptedException {
 		
 		driver.findElement(By.cssSelector("button[type='button']")).click();
 		WebElement description = new WebDriverWait(driver, Duration.ofSeconds(10))

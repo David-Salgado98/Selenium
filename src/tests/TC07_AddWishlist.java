@@ -149,7 +149,8 @@ public class TC07_AddWishlist {
 		WebElement details = driver
 				.findElement(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]/a[1]"));
 		details.click();
-		Thread.sleep(2000);
+		new WebDriverWait(driver, Duration.ofSeconds(10))
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".modal-title.w-100")));
 		String text3 = driver.findElement(By.cssSelector(".modal-title.w-100")).getText();
 		Assert.assertTrue(text3.contains("Added!"));
 		Reporter.log("Item Added Correctly  <br>");
