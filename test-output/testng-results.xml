@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[The webpage loads correctly<br>]]>
+    </line>
+    <line>
+      <![CDATA[The account is created<br>]]>
+    </line>
+    <line>
+      <![CDATA[The name is showed<br>]]>
     </line>
     <line>
       <![CDATA[The Products page loads correctly<br>]]>
@@ -19,67 +25,121 @@
     <line>
       <![CDATA[Summary page displayed <br>]]>
     </line>
+    <line>
+      <![CDATA[address page displayed <br>]]>
+    </line>
+    <line>
+      <![CDATA[shipping page displayed and terms accepted <br>]]>
+    </line>
+    <line>
+      <![CDATA[payment added correctly <br>]]>
+    </line>
+    <line>
+      <![CDATA[The account is deleted<br>]]>
+    </line>
   </reporter-output>
-  <suite started-at="2023-06-11T02:42:31 CST" name="Default suite" finished-at="2023-06-11T02:42:48 CST" duration-ms="17155">
+  <suite started-at="2023-06-11T13:26:30 CST" name="Default suite" finished-at="2023-06-11T13:27:11 CST" duration-ms="41546">
     <groups>
     </groups>
-    <test started-at="2023-06-11T02:42:31 CST" name="Default test" finished-at="2023-06-11T02:42:48 CST" duration-ms="17155">
-      <class name="tests.TC12_AddToTheCart">
-        <test-method is-config="true" signature="S000_BeforeTest()[pri:0, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:31 CST" name="S000_BeforeTest" description="Setup the driver" finished-at="2023-06-11T02:42:36 CST" duration-ms="5451" status="PASS">
+    <test started-at="2023-06-11T13:26:30 CST" name="Default test" finished-at="2023-06-11T13:27:11 CST" duration-ms="41546">
+      <class name="tests.TC14_PlaceOrderWhileRigisterCheckout">
+        <test-method is-config="true" signature="S000_FirstStep()[pri:0, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:26:30 CST" name="S000_FirstStep" description="Setup the driver" finished-at="2023-06-11T13:26:36 CST" duration-ms="6273" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- S000_BeforeTest -->
-        <test-method signature="S001_MainPage()[pri:1, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:36 CST" name="S001_MainPage" description="Go to the webpage" finished-at="2023-06-11T02:42:42 CST" duration-ms="5673" status="PASS">
+        </test-method> <!-- S000_FirstStep -->
+        <test-method signature="S001_GoWebpage()[pri:1, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:26:36 CST" name="S001_GoWebpage" description="Go to URL &#039;http://automationpractice.com/index.php&#039;" finished-at="2023-06-11T13:26:41 CST" duration-ms="4800" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[The webpage loads correctly<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S001_MainPage -->
-        <test-method signature="S002_ProductsClick()[pri:2, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:42 CST" name="S002_ProductsClick" description="Click on Test Cases Link" finished-at="2023-06-11T02:42:45 CST" duration-ms="3479" status="PASS">
+        </test-method> <!-- S001_GoWebpage -->
+        <test-method signature="S002_CreateUser()[pri:2, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:26:41 CST" name="S002_CreateUser" description="Create User" finished-at="2023-06-11T13:26:49 CST" duration-ms="8172" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The account is created<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S002_CreateUser -->
+        <test-method signature="S003_LoginName()[pri:3, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:26:49 CST" name="S003_LoginName" description="Check the login name" finished-at="2023-06-11T13:26:52 CST" duration-ms="3382" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The name is showed<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S003_LoginName -->
+        <test-method signature="S002_ProductsClick()[pri:4, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:26:52 CST" name="S002_ProductsClick" description="Click on Products Link" finished-at="2023-06-11T13:27:00 CST" duration-ms="7486" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[The Products page loads correctly<br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- S002_ProductsClick -->
-        <test-method signature="S003_AddToTheCart()[pri:3, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:45 CST" name="S003_AddToTheCart" description="Add product to the cart" finished-at="2023-06-11T02:42:46 CST" duration-ms="470" status="PASS">
+        <test-method signature="S003_AddToTheCart()[pri:5, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:00 CST" name="S003_AddToTheCart" description="Add product to the cart" finished-at="2023-06-11T13:27:01 CST" duration-ms="1014" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Item Added Correctly  <br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- S003_AddToTheCart -->
-        <test-method signature="S004_ContinueShopping()[pri:4, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:46 CST" name="S004_ContinueShopping" description="Continue Shopping" finished-at="2023-06-11T02:42:46 CST" duration-ms="134" status="PASS">
+        <test-method signature="S004_ContinueShopping()[pri:6, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:01 CST" name="S004_ContinueShopping" description="Continue Shopping" finished-at="2023-06-11T13:27:01 CST" duration-ms="97" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Continue Shopping  <br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- S004_ContinueShopping -->
-        <test-method signature="S005_AddToTheCart2()[pri:5, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:46 CST" name="S005_AddToTheCart2" description="Add product to the cart2" finished-at="2023-06-11T02:42:47 CST" duration-ms="762" status="PASS">
+        <test-method signature="S005_AddToTheCart2()[pri:7, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:01 CST" name="S005_AddToTheCart2" description="Add product to the cart2" finished-at="2023-06-11T13:27:02 CST" duration-ms="670" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Item Added Correctly  <br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- S005_AddToTheCart2 -->
-        <test-method signature="S006_ViewCart()[pri:6, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:47 CST" name="S006_ViewCart" description="View Cart" finished-at="2023-06-11T02:42:47 CST" duration-ms="836" status="PASS">
+        <test-method signature="S006_ViewCart()[pri:8, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:02 CST" name="S006_ViewCart" description="View Cart" finished-at="2023-06-11T13:27:03 CST" duration-ms="1658" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Summary page displayed <br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- S006_ViewCart -->
-        <test-method signature="S007_VerifyItems()[pri:7, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:47 CST" name="S007_VerifyItems" description="Verify Items" finished-at="2023-06-11T02:42:48 CST" duration-ms="81" status="PASS">
+        <test-method signature="S007_VerifyItems()[pri:9, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:03 CST" name="S007_VerifyItems" description="Verify Items" finished-at="2023-06-11T13:27:03 CST" duration-ms="55" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- S007_VerifyItems -->
-        <test-method signature="S008_VerifyNewPrice()[pri:8, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:48 CST" name="S008_VerifyNewPrice" description="Verify price" finished-at="2023-06-11T02:42:48 CST" duration-ms="193" status="PASS">
+        <test-method signature="S008_Summary()[pri:10, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:03 CST" name="S008_Summary" description="Click proceed to checkout Again" finished-at="2023-06-11T13:27:05 CST" duration-ms="1494" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[address page displayed <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S008_Summary -->
+        <test-method signature="S008_VerifyTotal()[pri:11, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:05 CST" name="S008_VerifyTotal" description="Verify price" finished-at="2023-06-11T13:27:05 CST" duration-ms="266" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- S008_VerifyNewPrice -->
-      </class> <!-- tests.TC12_AddToTheCart -->
+        </test-method> <!-- S008_VerifyTotal -->
+        <test-method signature="S010_Comment()[pri:12, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:05 CST" name="S010_Comment" description="Proceed to shipping" finished-at="2023-06-11T13:27:07 CST" duration-ms="1553" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[shipping page displayed and terms accepted <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S010_Comment -->
+        <test-method signature="S011_ProcedToOrderComplete()[pri:13, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:07 CST" name="S011_ProcedToOrderComplete" description="Proceed to complete order" finished-at="2023-06-11T13:27:10 CST" duration-ms="3301" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[payment added correctly <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S011_ProcedToOrderComplete -->
+        <test-method signature="S021_DeleteAccount()[pri:24, instance:tests.TC14_PlaceOrderWhileRigisterCheckout@5a56cdac]" started-at="2023-06-11T13:27:10 CST" name="S021_DeleteAccount" description="Delete Account" finished-at="2023-06-11T13:27:11 CST" duration-ms="1253" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The account is deleted<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S021_DeleteAccount -->
+      </class> <!-- tests.TC14_PlaceOrderWhileRigisterCheckout -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -41,7 +41,7 @@ public class TC12_AddToTheCart {
 		Reporter.log("The webpage loads correctly<br>");
 	}
 
-	@Test(description = "Click on Test Cases Link", priority = 2)
+	@Test(description = "Click on Products Link", priority = 2)
 	public void S002_ProductsClick() {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
