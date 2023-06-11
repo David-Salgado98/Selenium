@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TC09_ProductQuantity">
+      <class name="tests.TC12_AddToTheCart">
         <methods>
-          <include name="S003_AccesToPage"/>
-          <include name="after"/>
-          <include name="S005_HoverFirstProductMore"/>
-          <include name="S004_HoverClickTshirt"/>
-          <include name="S009_VerifyNewPrice"/>
-          <include name="S000_FirstStep"/>
-          <include name="S006_VerifyCuantity"/>
-          <include name="S009_AddCart"/>
-          <include name="S010_CheckOutClick"/>
+          <include name="S006_ViewCart"/>
+          <include name="S002_ProductsClick"/>
+          <include name="S001_MainPage"/>
+          <include name="S003_AddToTheCart"/>
+          <include name="S004_ContinueShopping"/>
+          <include name="S005_AddToTheCart2"/>
+          <include name="S008_VerifyNewPrice"/>
+          <include name="S007_VerifyItems"/>
+          <include name="S000_BeforeTest"/>
         </methods>
-      </class> <!-- tests.TC09_ProductQuantity -->
+      </class> <!-- tests.TC12_AddToTheCart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

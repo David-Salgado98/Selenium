@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[The webpage loads correctly<br>]]>
     </line>
     <line>
-      <![CDATA[The account is created<br>]]>
+      <![CDATA[The Products page loads correctly<br>]]>
     </line>
     <line>
-      <![CDATA[The account logout<br>]]>
+      <![CDATA[Item Added Correctly  <br>]]>
     </line>
     <line>
-      <![CDATA[Quantity of the product=3 <br>]]>
+      <![CDATA[Continue Shopping  <br>]]>
     </line>
     <line>
       <![CDATA[Item Added Correctly  <br>]]>
@@ -20,74 +20,66 @@
       <![CDATA[Summary page displayed <br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-06-09T10:11:11 CST" name="Default suite" finished-at="2023-06-09T10:12:04 CST" duration-ms="53680">
+  <suite started-at="2023-06-11T02:42:31 CST" name="Default suite" finished-at="2023-06-11T02:42:48 CST" duration-ms="17155">
     <groups>
     </groups>
-    <test started-at="2023-06-09T10:11:11 CST" name="Default test" finished-at="2023-06-09T10:12:04 CST" duration-ms="53680">
-      <class name="tests.TC09_ProductQuantity">
-        <test-method is-config="true" signature="S000_FirstStep()[pri:0, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:11:11 CST" name="S000_FirstStep" description="Setup the driver" finished-at="2023-06-09T10:11:36 CST" duration-ms="25475" status="PASS">
+    <test started-at="2023-06-11T02:42:31 CST" name="Default test" finished-at="2023-06-11T02:42:48 CST" duration-ms="17155">
+      <class name="tests.TC12_AddToTheCart">
+        <test-method is-config="true" signature="S000_BeforeTest()[pri:0, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:31 CST" name="S000_BeforeTest" description="Setup the driver" finished-at="2023-06-11T02:42:36 CST" duration-ms="5451" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- S000_FirstStep -->
-        <test-method signature="S001_GoWebpage()[pri:1, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:11:36 CST" name="S001_GoWebpage" description="Go to URL &#039;http://automationpractice.com/index.php&#039;" finished-at="2023-06-09T10:11:39 CST" duration-ms="3179" status="PASS">
+        </test-method> <!-- S000_BeforeTest -->
+        <test-method signature="S001_MainPage()[pri:1, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:36 CST" name="S001_MainPage" description="Go to the webpage" finished-at="2023-06-11T02:42:42 CST" duration-ms="5673" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[The webpage loads correctly<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S001_GoWebpage -->
-        <test-method signature="S002_CreateUser()[pri:2, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:11:39 CST" name="S002_CreateUser" description="Create User" finished-at="2023-06-09T10:11:46 CST" duration-ms="7055" status="PASS">
+        </test-method> <!-- S001_MainPage -->
+        <test-method signature="S002_ProductsClick()[pri:2, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:42 CST" name="S002_ProductsClick" description="Click on Test Cases Link" finished-at="2023-06-11T02:42:45 CST" duration-ms="3479" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[The account is created<br>]]>
+              <![CDATA[The Products page loads correctly<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S002_CreateUser -->
-        <test-method signature="S003_AccesToPage()[pri:3, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:11:46 CST" name="S003_AccesToPage" description="Go to login to the page" finished-at="2023-06-09T10:11:54 CST" duration-ms="7418" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The account logout<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S003_AccesToPage -->
-        <test-method signature="S004_HoverClickTshirt()[pri:4, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:11:54 CST" name="S004_HoverClickTshirt" description="Hover over &#039;Women&#039; yab and clicks on &#039;T-shirts&#039;" finished-at="2023-06-09T10:11:57 CST" duration-ms="3673" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- S004_HoverClickTshirt -->
-        <test-method signature="S005_HoverFirstProductMore()[pri:5, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:11:57 CST" name="S005_HoverFirstProductMore" description="Hover the first product and click on &#039;more&#039; button" finished-at="2023-06-09T10:11:59 CST" duration-ms="1736" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- S005_HoverFirstProductMore -->
-        <test-method signature="S006_VerifyCuantity()[pri:6, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:11:59 CST" name="S006_VerifyCuantity" description="Verify cuantity = 1" finished-at="2023-06-09T10:12:00 CST" duration-ms="390" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Quantity of the product=3 <br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S006_VerifyCuantity -->
-        <test-method signature="S009_AddCart()[pri:7, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:12:00 CST" name="S009_AddCart" description="S009_Add to cart" finished-at="2023-06-09T10:12:00 CST" duration-ms="675" status="PASS">
+        </test-method> <!-- S002_ProductsClick -->
+        <test-method signature="S003_AddToTheCart()[pri:3, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:45 CST" name="S003_AddToTheCart" description="Add product to the cart" finished-at="2023-06-11T02:42:46 CST" duration-ms="470" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Item Added Correctly  <br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S009_AddCart -->
-        <test-method signature="S010_CheckOutClick()[pri:8, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:12:00 CST" name="S010_CheckOutClick" description="Proceed to checkout" finished-at="2023-06-09T10:12:02 CST" duration-ms="1908" status="PASS">
+        </test-method> <!-- S003_AddToTheCart -->
+        <test-method signature="S004_ContinueShopping()[pri:4, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:46 CST" name="S004_ContinueShopping" description="Continue Shopping" finished-at="2023-06-11T02:42:46 CST" duration-ms="134" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Continue Shopping  <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S004_ContinueShopping -->
+        <test-method signature="S005_AddToTheCart2()[pri:5, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:46 CST" name="S005_AddToTheCart2" description="Add product to the cart2" finished-at="2023-06-11T02:42:47 CST" duration-ms="762" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Item Added Correctly  <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S005_AddToTheCart2 -->
+        <test-method signature="S006_ViewCart()[pri:6, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:47 CST" name="S006_ViewCart" description="View Cart" finished-at="2023-06-11T02:42:47 CST" duration-ms="836" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Summary page displayed <br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S010_CheckOutClick -->
-        <test-method signature="S009_VerifyNewPrice()[pri:9, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:12:02 CST" name="S009_VerifyNewPrice" description="Verify price" finished-at="2023-06-09T10:12:02 CST" duration-ms="76" status="PASS">
+        </test-method> <!-- S006_ViewCart -->
+        <test-method signature="S007_VerifyItems()[pri:7, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:47 CST" name="S007_VerifyItems" description="Verify Items" finished-at="2023-06-11T02:42:48 CST" duration-ms="81" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- S009_VerifyNewPrice -->
-        <test-method is-config="true" signature="after()[pri:0, instance:tests.TC09_ProductQuantity@1de76cc7]" started-at="2023-06-09T10:12:02 CST" name="after" finished-at="2023-06-09T10:12:04 CST" duration-ms="2001" status="PASS">
+        </test-method> <!-- S007_VerifyItems -->
+        <test-method signature="S008_VerifyNewPrice()[pri:8, instance:tests.TC12_AddToTheCart@c88a337]" started-at="2023-06-11T02:42:48 CST" name="S008_VerifyNewPrice" description="Verify price" finished-at="2023-06-11T02:42:48 CST" duration-ms="193" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- after -->
-      </class> <!-- tests.TC09_ProductQuantity -->
+        </test-method> <!-- S008_VerifyNewPrice -->
+      </class> <!-- tests.TC12_AddToTheCart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
