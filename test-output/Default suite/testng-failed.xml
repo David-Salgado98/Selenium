@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TC14_PlaceOrderWhileRigisterCheckout">
+      <class name="tests.TC18_ViewCategory">
         <methods>
+          <include name="S005_ClickTshirt"/>
           <include name="S000_FirstStep"/>
-          <include name="S011_ProcedToOrderComplete"/>
         </methods>
-      </class> <!-- tests.TC14_PlaceOrderWhileRigisterCheckout -->
+      </class> <!-- tests.TC18_ViewCategory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -20,7 +20,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class TC14_PlaceOrderWhileRigisterCheckout {
+public class TC16_PlaceOrderJustLogin {
 	// BEFORE
 				WebDriver driver = null;
 
@@ -104,24 +104,17 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 
 				}
 				
-				@Test(description = "Check the login name", priority = 3)
-				public void S003_LoginName() throws InterruptedException {
+				@Test(description = "Logoutfrom create account", priority = 3)
+
+				public void S004_Logout() throws InterruptedException {
 					JavascriptExecutor js = (JavascriptExecutor) driver;	
 					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 					
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
-					WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
-					Assert.assertTrue(name.getText().contains("Logged in as "+nombre));
-					Reporter.log("The name is showed<br>");
-				}
-				
-				@Test(description = "Logoutfrom create account", priority = 4)
-
-				public void S004_Logout() throws InterruptedException {
-					
-					driver.findElement(By.cssSelector("a[href='/logout']")).click();
+					WebElement logoutLink = new WebDriverWait(driver, Duration.ofSeconds(10))
+							.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/logout']")));
+					logoutLink.click();
 					
 					
 					WebElement logout = new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -130,8 +123,47 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					Reporter.log("The Login form appears<br>");
 				}
 				
-				@Test(description = "Click on Products Link", priority = 5)
-				public void S002_ProductsClick() {
+				@Test(description = "Click login", priority = 4)
+
+				public void S006_GoLogin() throws InterruptedException {
+					WebElement loginLink = new WebDriverWait(driver, Duration.ofSeconds(10))
+							
+							.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/login']")));
+					loginLink.click();
+					WebElement login = new WebDriverWait(driver, Duration.ofSeconds(10))
+							
+							.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='login-form'] h2")));
+					Assert.assertEquals("Login to your account", login.getText());
+					Reporter.log("Login correctly<br>");
+				}
+				
+				@Test(description = "Login create account", priority = 5)
+
+				public void S007_TypeEmail() throws InterruptedException {
+					
+					
+					driver.findElement(By.cssSelector("input[data-qa='login-email']")).sendKeys(correo);
+					driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys(password);
+					
+					driver.findElement(By.cssSelector("button[data-qa='login-button']")).click();
+					WebElement logout = new WebDriverWait(driver, Duration.ofSeconds(10))
+							.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/delete_account']")));
+					Assert.assertTrue(logout.isDisplayed());
+					Reporter.log("The Login was Succesfull<br>");
+				}
+				
+				@Test(description = "Check the login name", priority = 6)
+				public void S008_LoginName() throws InterruptedException {
+					
+				WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
+						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
+				Assert.assertTrue(name.getText().contains("Logged in as "+nombre));
+				Reporter.log("The name is showed<br>");
+				}
+				
+				
+				@Test(description = "Click on Products Link", priority = 7)
+				public void S007_ProductsClick() {
 					
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
@@ -152,7 +184,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					Reporter.log("The Products page loads correctly<br>");
 				}
 				
-				@Test(description = "Add product to the cart", priority = 6)
+				@Test(description = "Add product to the cart", priority = 8)
 				public void S003_AddToTheCart() {
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("javascript:window.scrollBy(0,550)");
@@ -168,7 +200,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					Reporter.log("Item Added Correctly  <br>");
 				}
 				
-				@Test(description = "Continue Shopping", priority = 7)
+				@Test(description = "Continue Shopping", priority = 9)
 				public void S004_ContinueShopping() {
 					
 					WebElement conti = driver.findElement(By.cssSelector(".btn.btn-success.close-modal.btn-block"));
@@ -179,7 +211,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					Reporter.log("Continue Shopping  <br>");
 				}
 				
-				@Test(description = "Add product to the cart2", priority = 8)
+				@Test(description = "Add product to the cart2", priority = 10)
 				public void S005_AddToTheCart2() {
 					
 					WebElement add = new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -195,7 +227,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					Reporter.log("Item Added Correctly  <br>");
 				}
 				
-				@Test(description = "View Cart", priority = 9)
+				@Test(description = "View Cart", priority = 11)
 				public void S006_ViewCart() {
 					
 					driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
@@ -206,7 +238,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					Reporter.log("Summary page displayed <br>");
 				}
 				
-				@Test(description = "Verify Items", priority = 10)
+				@Test(description = "Verify Items", priority = 12)
 				public void S007_VerifyItems() throws InterruptedException {
 					
 					String nombre1 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
@@ -218,58 +250,8 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					
 				}
 				
-				
-				@Test(description = "Click proceed to checkout Again", priority = 11)
+				@Test(description = "Click proceed to checkout Again", priority = 13)
 				public void S008_Summary() throws InterruptedException {
-					driver.findElement(By.cssSelector(".btn.btn-default.check_out")).click();
-					WebElement resume = new WebDriverWait(driver, Duration.ofSeconds(10))
-							.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//u[normalize-space()='Register / Login']")));
-					resume.click();
-					WebElement login = new WebDriverWait(driver, Duration.ofSeconds(10))
-							.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-qa='login-button']")));
-					Assert.assertTrue(login.isDisplayed());
-					Reporter.log("Redirect to the account login <br>");
-				}
-				
-				@Test(description = "Login to proceed to checkout Again", priority = 12)
-				public void S012_Summary() throws InterruptedException {
-				
-				driver.findElement(By.cssSelector("input[data-qa='login-email']")).sendKeys(correo);
-				driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys(password);
-				
-				driver.findElement(By.cssSelector("button[data-qa='login-button']")).click();
-				
-				WebElement logout = new WebDriverWait(driver, Duration.ofSeconds(10))
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/logout']")));
-				Assert.assertTrue(logout.isDisplayed());
-				Reporter.log("The form appears<br>");
-				}
-				
-				@Test(description = "View Cart", priority = 13)
-				public void S013_ViewCartAfterLogin() {
-					
-					driver.findElement(By.xpath("//body[1]/header[1]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[3]/a[1]")).click();
-					WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
-							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
-					String text4 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
-					Assert.assertTrue(text4.contains("Blue"));
-					Reporter.log("Summary page displayed <br>");
-				}
-				
-				@Test(description = "Verify Items", priority = 14)
-				public void S014_VerifyItemsAfterLogin() throws InterruptedException {
-					
-					String nombre1 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
-					String nombre2 = driver.findElement(By.cssSelector("a[href='/product_details/2']")).getText();
-					
-					Assert.assertEquals("Blue Top", nombre1);
-					Assert.assertEquals("Men Tshirt", nombre2);
-					
-					
-				}
-				
-				@Test(description = "Click proceed to checkout Again", priority = 15)
-				public void S015_CartResume() throws InterruptedException {
 					driver.findElement(By.cssSelector(".btn.btn-default.check_out")).click();
 					WebElement address = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ul[id='address_delivery'] li:nth-child(4)")));
@@ -277,8 +259,8 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					Reporter.log("address page displayed <br>");
 				}
 				
-				@Test(description = "Verify price", priority = 16)
-				public void S015_VerifyTotal() throws InterruptedException {
+				@Test(description = "Verify price", priority = 14)
+				public void S008_VerifyTotal() throws InterruptedException {
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("javascript:window.scrollBy(0,550)");
 					
@@ -314,7 +296,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					
 				}
 				
-				@Test(description = "Proceed to shipping", priority = 17)
+				@Test(description = "Proceed to shipping", priority = 15)
 				public void S010_Comment() throws InterruptedException {
 					
 					JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -332,7 +314,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				
 				
 
-				@Test(description = "Proceed to complete order", priority = 18)
+				@Test(description = "Proceed to complete order", priority = 16)
 				public void S011_ProcedToOrderComplete() throws InterruptedException {
 					
 					driver.findElement(By.name("name_on_card")).sendKeys("Eleanor Rossvelt");
@@ -348,7 +330,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 					Reporter.log("payment added correctly <br>");
 				}
 				
-				@Test(description = "Delete Account", priority = 19)
+				@Test(description = "Delete Account", priority = 17)
 				public void S021_DeleteAccount() throws InterruptedException {
 					WebElement delete = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href='/delete_account']")));
