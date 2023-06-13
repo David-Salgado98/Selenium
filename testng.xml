@@ -1,10 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+  <test thread-count="1" name="Test1">
     <classes>
       <class name="tests.TC01_RegisterUser"/>
-      <!--<class name="tests.TC01_CreateAccount"/>-->
+      
+	  <!-- <class name="tests.TC02_LoginUser"/>
+     <class name="tests.TC03_LoginIncorrectUser"/>
+      <class name="tests.TC04_LogoutUser"/>
+      <class name="tests.TC05_RegisterUserWithAnExistingEmail"/>
+      <class name="tests.TC06_ContactUsForm"/>
+      <class name="tests.TC07_TestCases"/>
+      <class name="tests.TC08_VerifyAllProducts"/>
+      <class name="tests.TC09_SerchProduct"/>
+      <class name="tests.TC10_VerifySubscription"/>
+      <class name="tests.TC11_CartSubscription"/>
+      <class name="tests.TC12_AddToTheCart"/>
+      <class name="tests.TC13_VerifyProductQuantity"/>
+      <class name="tests.TC14_PlaceOrderWhileRigisterCheckout"/>
+      <class name="tests.TC15_PlaceOrderAlreadyRegister"/>
+      <class name="tests.TC16_PlaceOrderJustLogin"/>
+      <class name="tests.TC17_RemoveElementFromtheCart"/>
+      <class name="tests.TC18_ViewCategory"/>
+      <class name="tests.TC19_ViewAndCart"/>
+      <class name="tests.TC20_SearchProductsandVerifyCart"/>
+      <class name="tests.TC21_AddAReview"/>
+      <class name="tests.TC22_RecomendenItems"/>
+      <class name="tests.TC23_VerifyAddress"/>
+      <class name="tests.TC24_DownloadInvoice"/>
+      <class name="tests.TC25_ScrollDownAndArrow"/>
+      <class name="tests.TC26_ScrollDownAndUp"/>-->
+      
+    </classes>
+  </test> <!-- Test -->
+  
+   <test thread-count="1" name="Test2">
+    <classes>
+     
+      <class name="tests.TC02_LoginUser"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="1" name="Test3">
+    <classes>
+     
+      <class name="tests.TC03_LoginIncorrectUser"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="1" name="Test4">
+    <classes>
+     
+     <class name="tests.TC04_LogoutUser"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="1" name="Test5">
+    <classes>
+     
+      <class name="tests.TC05_RegisterUserWithAnExistingEmail"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test thread-count="1" name="Test6">
+    <classes>
+     
+      <class name="tests.TC06_ContactUsForm"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test thread-count="1" name="Test7">
+    <classes>
+     
+      <class name="tests.TC07_TestCases"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test thread-count="1" name="Test8">
+    <classes>
+     
+     <class name="tests.TC08_VerifyAllProducts"/>
+     
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test thread-count="1" name="Test9">
+    <classes>
+     
+      <class name="tests.TC09_SerchProduct"/>
+     
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test thread-count="1" name="Test10">
+    <classes>
+     
+      <class name="tests.TC10_VerifySubscription"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="1" name="Test11">
+    <classes>
+     
+      <class name="tests.TC11_CartSubscription"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test12">
+    <classes>
+     
+     <class name="tests.TC12_AddToTheCart"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test13">
+    <classes>
+     
+      
+     <class name="tests.TC13_VerifyProductQuantity"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test14">
+    <classes>
+     
+      
+     <class name="tests.TC14_PlaceOrderWhileRigisterCheckout"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test15">
+    <classes>
+     
+      
+      <class name="tests.TC15_PlaceOrderAlreadyRegister"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test16">
+    <classes>
+     
+      <class name="tests.TC16_PlaceOrderJustLogin"/>
+      
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test17">
+    <classes>
+     
+      <class name="tests.TC17_RemoveElementFromtheCart"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test18">
+    <classes>
+     
+      <class name="tests.TC18_ViewCategory"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test19">
+    <classes>
+     
+      <class name="tests.TC19_ViewAndCart"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test20">
+    <classes>
+     
+      <class name="tests.TC20_SearchProductsandVerifyCart"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test21">
+    <classes>
+     
+      <class name="tests.TC21_AddAReview"/>
+     
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test22">
+    <classes>
+     
+       <class name="tests.TC22_RecomendenItems"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="1" name="Test23">
+    <classes>
+     
+      <class name="tests.TC23_VerifyAddress"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test24">
+    <classes>
+     
+       <class name="tests.TC24_DownloadInvoice"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test25">
+    <classes>
+     
+     
+      <class name="tests.TC25_ScrollDownAndArrow"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test26">
+    <classes>
+     
+      
+      <class name="tests.TC26_ScrollDownAndUp"/>
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

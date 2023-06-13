@@ -77,7 +77,7 @@ public class TC03_LoginIncorrectUser {
 		
 		driver.findElement(By.cssSelector("button[data-qa='login-button']")).click();
 		WebElement logout = new WebDriverWait(driver, Duration.ofSeconds(10))
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > p:nth-child(4)")));
+				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > p:nth-child(4)")));
 		Assert.assertTrue(logout.getText().contains("Your email or password is incorrect!"));
 		Reporter.log("Error messaje showed<br>");
 	}

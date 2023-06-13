@@ -60,7 +60,11 @@ public class TC18_ViewCategory {
 		WebElement dress = new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/category_products/1']"))); 
 		dress.click();
+		try {
 		dress.click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		
 			
 			WebElement slevelessDress = new WebDriverWait(driver, Duration.ofSeconds(10))

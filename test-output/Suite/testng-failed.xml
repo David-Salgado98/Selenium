@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Test3(failed)">
     <classes>
-      <class name="tests.TC01_RegisterUser">
+      <class name="tests.TC03_LoginIncorrectUser">
         <methods>
-          <include name="LastStep"/>
           <include name="S000_BeforeTest"/>
-          <include name="S021_DeleteAccount"/>
+          <include name="LastStep"/>
+          <include name="S003_TypeEmail"/>
         </methods>
-      </class> <!-- tests.TC01_RegisterUser -->
+      </class> <!-- tests.TC03_LoginIncorrectUser -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test3(failed) -->
+  <test thread-count="5" name="Test8(failed)">
+    <classes>
+      <class name="tests.TC08_VerifyAllProducts">
+        <methods>
+          <include name="S000_BeforeTest"/>
+          <include name="S004_SeeMore"/>
+          <include name="LastStep"/>
+          <include name="S005_Details"/>
+        </methods>
+      </class> <!-- tests.TC08_VerifyAllProducts -->
+    </classes>
+  </test> <!-- Test8(failed) -->
+  <test thread-count="5" name="Test18(failed)">
+    <classes>
+      <class name="tests.TC18_ViewCategory">
+        <methods>
+          <include name="S005_ClickTshirt"/>
+          <include name="S003_ClickDress"/>
+          <include name="AfterClass"/>
+          <include name="S000_FirstStep"/>
+        </methods>
+      </class> <!-- tests.TC18_ViewCategory -->
+    </classes>
+  </test> <!-- Test18(failed) -->
+  <test thread-count="5" name="Test24(failed)">
+    <classes>
+      <class name="tests.TC24_DownloadInvoice">
+        <methods>
+          <include name="S015_DownloadInvoice"/>
+          <include name="S013_Comment"/>
+          <include name="S014_ProcedToOrderComplete"/>
+          <include name="S000_FirstStep"/>
+          <include name="S010_LoginName"/>
+          <include name="S012_Summary"/>
+          <include name="S016_DeleteAccount"/>
+          <include name="AfterClass"/>
+        </methods>
+      </class> <!-- tests.TC24_DownloadInvoice -->
+    </classes>
+  </test> <!-- Test24(failed) -->
 </suite> <!-- Failed suite [Suite] -->

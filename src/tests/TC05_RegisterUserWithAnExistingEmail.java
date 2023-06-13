@@ -167,7 +167,7 @@ public class TC05_RegisterUserWithAnExistingEmail {
 			signup.click();
 			
 			WebElement error = new WebDriverWait(driver, Duration.ofSeconds(10))
-					.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > form:nth-child(2) > p:nth-child(5)")));
+					.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > form:nth-child(2) > p:nth-child(5)")));
 		Assert.assertEquals("Email Address already exist!",error.getText());
 		Reporter.log("The error message was displayed Succesfull<br>");
 	}

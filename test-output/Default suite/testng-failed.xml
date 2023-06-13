@@ -3,13 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TC01_RegisterUser">
+      <class name="tests.TC24_DownloadInvoice">
         <methods>
-          <include name="LastStep"/>
-          <include name="S003_EnterEmailAdress"/>
-          <include name="S000_BeforeTest"/>
+          <include name="S015_DownloadInvoice"/>
+          <include name="S011_ViewCart"/>
+          <include name="S013_Comment"/>
+          <include name="S014_ProcedToOrderComplete"/>
+          <include name="S000_FirstStep"/>
+          <include name="S009_CreateUser"/>
+          <include name="S010_LoginName"/>
+          <include name="S012_Summary"/>
+          <include name="S016_DeleteAccount"/>
+          <include name="AfterClass"/>
         </methods>
-      </class> <!-- tests.TC01_RegisterUser -->
+      </class> <!-- tests.TC24_DownloadInvoice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

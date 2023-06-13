@@ -68,7 +68,7 @@ public class TC02_LoginUser {
 					driver.findElement(By.cssSelector("input[data-qa='signup-email']")).sendKeys(correo);
 					signup.click();
 					WebElement firstname = new WebDriverWait(driver, Duration.ofSeconds(10))
-							.until(ExpectedConditions.elementToBeClickable(By.id("first_name")));
+							.until(ExpectedConditions.presenceOfElementLocated(By.id("first_name")));
 			       
 					driver.findElement(By.id("password")).sendKeys(password);
 					firstname.sendKeys("Eleanor");
@@ -112,7 +112,7 @@ public class TC02_LoginUser {
 				driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 				driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 			WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
-					.until(ExpectedConditions.elementToBeClickable(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
+					.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
 			Assert.assertTrue(name.getText().contains(nombre));
 			Reporter.log("The name is showed<br>");
 			}
@@ -149,7 +149,7 @@ public class TC02_LoginUser {
 				driver.findElement(By.cssSelector("a[href='/login']")).click();
 				WebElement login = new WebDriverWait(driver, Duration.ofSeconds(10))
 						
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='login-form'] h2")));
+						.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='login-form'] h2")));
 				Assert.assertEquals("Login to your account", login.getText());
 				Reporter.log("Login correctly<br>");
 			}
@@ -173,7 +173,7 @@ public class TC02_LoginUser {
 			public void S008_LoginName() throws InterruptedException {
 				
 			WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
-					.until(ExpectedConditions.elementToBeClickable(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
+					.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
 			Assert.assertTrue(name.getText().contains("Logged in as "+nombre));
 			Reporter.log("The name is showed<br>");
 			}
@@ -184,7 +184,7 @@ public class TC02_LoginUser {
 			WebElement delete = driver.findElement(By.cssSelector("a[href='/delete_account']"));
 			delete.click();
 			WebElement promt = new WebDriverWait(driver, Duration.ofSeconds(10))
-					.until(ExpectedConditions.elementToBeClickable(By.cssSelector("h2[class='title text-center'] b")));
+					.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("h2[class='title text-center'] b")));
 			Assert.assertTrue(promt.getText().contains("DELETED"));
 			Reporter.log("The account is deleted<br>");
 			

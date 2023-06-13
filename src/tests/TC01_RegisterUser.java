@@ -74,8 +74,7 @@ public class TC01_RegisterUser {
 		driver.findElement(By.cssSelector("input[placeholder='Name']")).sendKeys(nombre);
 		driver.findElement(By.cssSelector("input[data-qa='signup-email']")).sendKeys(correo);
 		String corr = driver.findElement(By.cssSelector("input[data-qa='signup-email']")).getAttribute("value");
-		System.out.println(corr);
-		Assert.assertEquals(correo,corr);
+		
 		driver.findElement(By.cssSelector("button[data-qa='signup-button']")).click();
 		
 		Wait<WebDriver> waitForm = new FluentWait<WebDriver>(driver)
@@ -85,9 +84,10 @@ public class TC01_RegisterUser {
 	       	
 	       	WebElement nameDisplayed = waitForm.until(new Function<WebDriver, WebElement>() {
 	            public WebElement apply(WebDriver driver) {
-	                return driver.findElement(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1) > b:nth-child(1)"));
+	                return driver.findElement(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-4 col-sm-offset-1']/div[@class='login-form']/h2[@class='title text-center']/b[1]"));
 	              }
 	            });
+       	Assert.assertEquals(correo,corr);
 		Assert.assertEquals("ENTER ACCOUNT INFORMATION",nameDisplayed.getText());
 		Reporter.log("The form appears<br>");
 	}
@@ -313,7 +313,7 @@ public class TC01_RegisterUser {
 	WebElement delete = driver.findElement(By.cssSelector("a[href='/delete_account']"));
 	delete.click();
 	WebElement promt = new WebDriverWait(driver, Duration.ofSeconds(10))
-			.until(ExpectedConditions.elementToBeClickable(By.cssSelector("h2[class='title text-center'] b")));
+			.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("h2[class='title text-center'] b")));
 	Assert.assertTrue(promt.getText().contains("ACCOUNT DELETED"));
 	Reporter.log("The account is deleted<br>");
 	

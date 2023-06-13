@@ -66,13 +66,15 @@ public class TC09_SerchProduct {
 	
 	@Test(description = "search the same item on the search bar", priority = 4)
 	public void S004_SearchItem() throws InterruptedException {
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		
 		driver.findElement(By.id("search_product")).sendKeys("Pure Cotton V-Neck T-Shirt");
 		driver.findElement(By.id("submit_search")).click();
 		WebElement product = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='productinfo text-center']//p[contains(text(),'Pure Cotton V-Neck T-Shirt')]")));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
 		js.executeScript("javascript:window.scrollBy(250,550)");
 		
 		Assert.assertTrue(product.getText().contains("Cotton"));

@@ -196,8 +196,8 @@ public class TC23_VerifyAddress {
 	@Test(description = "Verify Items", priority = 9)
 	public void S007_VerifyItems() throws InterruptedException {
 		
-		String nombre1 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
-		String nombre2 = driver.findElement(By.cssSelector("a[href='/product_details/2']")).getText();
+		String nombre1 = driver.findElement(By.xpath("//tbody/tr[1]/td[2]/h4[1]/a[1]")).getText();
+		String nombre2 = driver.findElement(By.xpath("//tbody/tr[2]/td[2]/h4[1]/a[1]")).getText();
 		
 		Assert.assertEquals("Blue Top", nombre1);
 		Assert.assertEquals("Men Tshirt", nombre2);

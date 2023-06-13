@@ -79,7 +79,7 @@ public class TC08_VerifyAllProducts {
 		WebElement details = driver.findElement(By.cssSelector("a[href='/product_details/1']"));
 		details.click();
 		WebElement description = new WebDriverWait(driver, Duration.ofSeconds(10))
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='product-information'] h2"))); 
+				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='product-information'] h2"))); 
 		String text3 = description.getText();
 		Assert.assertTrue(text3.contains("Blue"));
 		Reporter.log("Item Resume Showed Correctly  <br>");

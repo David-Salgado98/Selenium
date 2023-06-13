@@ -1,65 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="23" passed="23" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[The webpage loads correctly<br>]]>
     </line>
     <line>
-      <![CDATA[The login page loads correctly<br>]]>
+      <![CDATA[The Products page loads correctly<br>]]>
     </line>
     <line>
-      <![CDATA[The form appears<br>]]>
+      <![CDATA[Item Added Correctly  <br>]]>
     </line>
     <line>
-      <![CDATA[The gender selected is checked <br>]]>
+      <![CDATA[Continue Shopping  <br>]]>
     </line>
     <line>
-      <![CDATA[The email typed at the beginning is shown<br>]]>
+      <![CDATA[Item Added Correctly  <br>]]>
     </line>
     <line>
-      <![CDATA[The password typed is shown<br>]]>
+      <![CDATA[Summary page displayed <br>]]>
     </line>
     <line>
-      <![CDATA[The birth date selected is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The newsletter is checked<br>]]>
-    </line>
-    <line>
-      <![CDATA[The offers checkbox is checked<br>]]>
-    </line>
-    <line>
-      <![CDATA[The name typed is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The lastname typed is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The name and the last name typed at the beginning of the form is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The company typed is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The first address typed is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The second address typed is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The country selected is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The state selected is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The city typed is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The ZIP code typed is shown<br>]]>
-    </line>
-    <line>
-      <![CDATA[The mobile number typed is shown<br>]]>
+      <![CDATA[Redirect to the account login <br>]]>
     </line>
     <line>
       <![CDATA[The account is created<br>]]>
@@ -68,184 +29,141 @@
       <![CDATA[The name is showed<br>]]>
     </line>
     <line>
+      <![CDATA[Summary page displayed <br>]]>
+    </line>
+    <line>
+      <![CDATA[address page displayed <br>]]>
+    </line>
+    <line>
+      <![CDATA[shipping page displayed and terms accepted <br>]]>
+    </line>
+    <line>
+      <![CDATA[payment added correctly <br>]]>
+    </line>
+    <line>
       <![CDATA[The account is deleted<br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-06-12T17:08:52 CST" name="Suite" finished-at="2023-06-12T17:09:32 CST" duration-ms="39702">
+  <suite started-at="2023-06-13T15:51:30 CST" name="Default suite" finished-at="2023-06-13T15:52:14 CST" duration-ms="43542">
     <groups>
     </groups>
-    <test started-at="2023-06-12T17:08:52 CST" name="Test" finished-at="2023-06-12T17:09:32 CST" duration-ms="39702">
-      <class name="tests.TC01_RegisterUser">
-        <test-method is-config="true" signature="S000_BeforeTest()[pri:0, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:08:52 CST" name="S000_BeforeTest" description="Setup the driver" finished-at="2023-06-12T17:09:00 CST" duration-ms="7815" status="PASS">
+    <test started-at="2023-06-13T15:51:30 CST" name="Default test" finished-at="2023-06-13T15:52:14 CST" duration-ms="43542">
+      <class name="tests.TC24_DownloadInvoice">
+        <test-method is-config="true" signature="S000_FirstStep()[pri:0, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:30 CST" name="S000_FirstStep" description="Setup the driver" finished-at="2023-06-13T15:51:37 CST" duration-ms="6571" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- S000_BeforeTest -->
-        <test-method signature="S001_MainPage()[pri:1, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:00 CST" name="S001_MainPage" description="Go to the webpage" finished-at="2023-06-12T17:09:03 CST" duration-ms="2984" status="PASS">
+        </test-method> <!-- S000_FirstStep -->
+        <test-method signature="S001_GoWebpage()[pri:1, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:37 CST" name="S001_GoWebpage" description="Go to URL &#039;http://automationpractice.com/index.php&#039;" finished-at="2023-06-13T15:51:41 CST" duration-ms="4426" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[The webpage loads correctly<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S001_MainPage -->
-        <test-method signature="S002_LogInClick()[pri:2, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:03 CST" name="S002_LogInClick" description="Click on login button" finished-at="2023-06-12T17:09:06 CST" duration-ms="3491" status="PASS">
+        </test-method> <!-- S001_GoWebpage -->
+        <test-method signature="S002_ProductsClick()[pri:2, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:41 CST" name="S002_ProductsClick" description="Click on Products Link" finished-at="2023-06-13T15:51:44 CST" duration-ms="2904" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[The login page loads correctly<br>]]>
+              <![CDATA[The Products page loads correctly<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S002_LogInClick -->
-        <test-method signature="S003_EnterEmailAdress()[pri:3, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:06 CST" name="S003_EnterEmailAdress" description="Type an email in the &#039;Email&#039; box and click on &#039;create account&#039; button" finished-at="2023-06-12T17:09:10 CST" duration-ms="3985" status="PASS">
+        </test-method> <!-- S002_ProductsClick -->
+        <test-method signature="S003_AddToTheCart()[pri:3, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:44 CST" name="S003_AddToTheCart" description="Add product to the cart" finished-at="2023-06-13T15:51:45 CST" duration-ms="1054" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[The form appears<br>]]>
+              <![CDATA[Item Added Correctly  <br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S003_EnterEmailAdress -->
-        <test-method signature="S004_GenderSelection()[pri:4, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:10 CST" name="S004_GenderSelection" description="select gender" finished-at="2023-06-12T17:09:10 CST" duration-ms="134" status="PASS">
+        </test-method> <!-- S003_AddToTheCart -->
+        <test-method signature="S004_ContinueShopping()[pri:4, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:45 CST" name="S004_ContinueShopping" description="Continue Shopping" finished-at="2023-06-13T15:51:45 CST" duration-ms="100" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[The gender selected is checked <br>]]>
+              <![CDATA[Continue Shopping  <br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S004_GenderSelection -->
-        <test-method signature="S005_EmailValidation()[pri:5, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:10 CST" name="S005_EmailValidation" description="check the mail" finished-at="2023-06-12T17:09:10 CST" duration-ms="48" status="PASS">
+        </test-method> <!-- S004_ContinueShopping -->
+        <test-method signature="S005_AddToTheCart2()[pri:5, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:45 CST" name="S005_AddToTheCart2" description="Add product to the cart2" finished-at="2023-06-13T15:51:46 CST" duration-ms="652" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[The email typed at the beginning is shown<br>]]>
+              <![CDATA[Item Added Correctly  <br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S005_EmailValidation -->
-        <test-method signature="S006_Password()[pri:6, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:10 CST" name="S006_Password" description="type the password un the &#039;password&#039; box" finished-at="2023-06-12T17:09:11 CST" duration-ms="118" status="PASS">
+        </test-method> <!-- S005_AddToTheCart2 -->
+        <test-method signature="S006_ViewCart()[pri:6, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:46 CST" name="S006_ViewCart" description="View Cart" finished-at="2023-06-13T15:51:47 CST" duration-ms="1237" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[The password typed is shown<br>]]>
+              <![CDATA[Summary page displayed <br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S006_Password -->
-        <test-method signature="S007_BirthDateSelection()[pri:7, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:11 CST" name="S007_BirthDateSelection" description="Select the date of birth" finished-at="2023-06-12T17:09:11 CST" duration-ms="710" status="PASS">
+        </test-method> <!-- S006_ViewCart -->
+        <test-method signature="S007_VerifyItems()[pri:7, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:47 CST" name="S007_VerifyItems" description="Verify Items" finished-at="2023-06-13T15:51:47 CST" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- S007_VerifyItems -->
+        <test-method signature="S008_Summary()[pri:8, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:47 CST" name="S008_Summary" description="Click proceed to checkout Again" finished-at="2023-06-13T15:51:49 CST" duration-ms="1719" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[The birth date selected is shown<br>]]>
+              <![CDATA[Redirect to the account login <br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S007_BirthDateSelection -->
-        <test-method signature="S009_SubscriptionNewsletter()[pri:9, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:11 CST" name="S009_SubscriptionNewsletter" description="Fill the Subscription Newsletter" finished-at="2023-06-12T17:09:11 CST" duration-ms="78" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The newsletter is checked<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S009_SubscriptionNewsletter -->
-        <test-method signature="S010_SelectOffers()[pri:10, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:11 CST" name="S010_SelectOffers" description="Fill the Subscription Offers" finished-at="2023-06-12T17:09:11 CST" duration-ms="70" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The offers checkbox is checked<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S010_SelectOffers -->
-        <test-method signature="S008_NameValidation()[pri:11, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:11 CST" name="S008_NameValidation" description="type the name un the &#039;name&#039; box" finished-at="2023-06-12T17:09:12 CST" duration-ms="161" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The name typed is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S008_NameValidation -->
-        <test-method signature="S009_LastNameVaidation()[pri:12, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:12 CST" name="S009_LastNameVaidation" description="type the  last name un the &#039; last name&#039; box" finished-at="2023-06-12T17:09:12 CST" duration-ms="129" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The lastname typed is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S009_LastNameVaidation -->
-        <test-method signature="S010_NameAndLastnameValidation()[pri:13, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:12 CST" name="S010_NameAndLastnameValidation" description="verify that the name and the last name is the same in the &#039;first name&#039; and &#039;last name&#039; box in the address section" finished-at="2023-06-12T17:09:12 CST" duration-ms="71" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The name and the last name typed at the beginning of the form is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S010_NameAndLastnameValidation -->
-        <test-method signature="S011_CompanyValidation()[pri:14, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:12 CST" name="S011_CompanyValidation" description="Enter the company name in the &#039;company&#039; box" finished-at="2023-06-12T17:09:12 CST" duration-ms="180" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The company typed is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S011_CompanyValidation -->
-        <test-method signature="S012_AdrressValidation()[pri:15, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:12 CST" name="S012_AdrressValidation" description="Enter the address in the &#039;address&#039; box" finished-at="2023-06-12T17:09:12 CST" duration-ms="162" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The first address typed is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S012_AdrressValidation -->
-        <test-method signature="S013_SecondAddressValidation()[pri:16, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:12 CST" name="S013_SecondAddressValidation" description="enter a second address in the &#039;second address&#039; box" finished-at="2023-06-12T17:09:12 CST" duration-ms="168" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The second address typed is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S013_SecondAddressValidation -->
-        <test-method signature="S014_CountrySelection()[pri:17, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:12 CST" name="S014_CountrySelection" description="select a country in the &#039;country&#039; selector" finished-at="2023-06-12T17:09:12 CST" duration-ms="152" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The country selected is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S014_CountrySelection -->
-        <test-method signature="S015_StateSelection()[pri:18, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:12 CST" name="S015_StateSelection" description="select a state from the &#039;state&#039; selector" finished-at="2023-06-12T17:09:13 CST" duration-ms="160" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The state selected is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S015_StateSelection -->
-        <test-method signature="S016_CityValidation()[pri:19, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:13 CST" name="S016_CityValidation" description="enter a city in the &#039;city&#039; box" finished-at="2023-06-12T17:09:13 CST" duration-ms="148" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The city typed is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S016_CityValidation -->
-        <test-method signature="S017_ZIPValidation()[pri:20, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:13 CST" name="S017_ZIPValidation" description="enter the ZIP code in the &#039;zip&#039; box" finished-at="2023-06-12T17:09:13 CST" duration-ms="149" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The ZIP code typed is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S017_ZIPValidation -->
-        <test-method signature="S018_MobileNumberValidation()[pri:21, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:13 CST" name="S018_MobileNumberValidation" description="enter numbers in the &#039;mobile number&#039; box" finished-at="2023-06-12T17:09:13 CST" duration-ms="139" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[The mobile number typed is shown<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- S018_MobileNumberValidation -->
-        <test-method signature="S019_ClickOnRegister()[pri:22, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:13 CST" name="S019_ClickOnRegister" description="Click on Register button" finished-at="2023-06-12T17:09:18 CST" duration-ms="5131" status="PASS">
+        </test-method> <!-- S008_Summary -->
+        <test-method signature="S009_CreateUser()[pri:9, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:49 CST" name="S009_CreateUser" description="Create User" finished-at="2023-06-13T15:51:54 CST" duration-ms="5471" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[The account is created<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S019_ClickOnRegister -->
-        <test-method signature="S020_LoginName()[pri:23, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:18 CST" name="S020_LoginName" description="Check the login name" finished-at="2023-06-12T17:09:22 CST" duration-ms="3478" status="PASS">
+        </test-method> <!-- S009_CreateUser -->
+        <test-method signature="S010_LoginName()[pri:10, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:54 CST" name="S010_LoginName" description="Check the login name" finished-at="2023-06-13T15:51:56 CST" duration-ms="1901" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[The name is showed<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S020_LoginName -->
-        <test-method signature="S021_DeleteAccount()[pri:24, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:22 CST" name="S021_DeleteAccount" description="Delete Account" finished-at="2023-06-12T17:09:30 CST" duration-ms="8070" status="PASS">
+        </test-method> <!-- S010_LoginName -->
+        <test-method signature="S011_ViewCart()[pri:11, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:56 CST" name="S011_ViewCart" description="View Cart" finished-at="2023-06-13T15:51:58 CST" duration-ms="1265" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Summary page displayed <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S011_ViewCart -->
+        <test-method signature="S012_Summary()[pri:12, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:58 CST" name="S012_Summary" description="Click proceed to checkout Again" finished-at="2023-06-13T15:51:59 CST" duration-ms="1145" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[address page displayed <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S012_Summary -->
+        <test-method signature="S013_Comment()[pri:13, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:51:59 CST" name="S013_Comment" description="Proceed to shipping" finished-at="2023-06-13T15:52:00 CST" duration-ms="1735" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[shipping page displayed and terms accepted <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S013_Comment -->
+        <test-method signature="S014_ProcedToOrderComplete()[pri:14, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:52:00 CST" name="S014_ProcedToOrderComplete" description="Proceed to complete order" finished-at="2023-06-13T15:52:03 CST" duration-ms="3034" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[payment added correctly <br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- S014_ProcedToOrderComplete -->
+        <test-method signature="S015_DownloadInvoice()[pri:15, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:52:03 CST" name="S015_DownloadInvoice" description="Download Invoice" finished-at="2023-06-13T15:52:09 CST" duration-ms="5468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- S015_DownloadInvoice -->
+        <test-method signature="S016_DeleteAccount()[pri:16, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:52:09 CST" name="S016_DeleteAccount" description="Delete Account" finished-at="2023-06-13T15:52:10 CST" duration-ms="1084" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[The account is deleted<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- S021_DeleteAccount -->
-        <test-method is-config="true" signature="LastStep()[pri:0, instance:tests.TC01_RegisterUser@3c7f66c4]" started-at="2023-06-12T17:09:30 CST" name="LastStep" finished-at="2023-06-12T17:09:32 CST" duration-ms="1871" status="PASS">
+        </test-method> <!-- S016_DeleteAccount -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:tests.TC24_DownloadInvoice@37d4349f]" started-at="2023-06-13T15:52:10 CST" name="AfterClass" finished-at="2023-06-13T15:52:14 CST" duration-ms="3619" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LastStep -->
-      </class> <!-- tests.TC01_RegisterUser -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- AfterClass -->
+      </class> <!-- tests.TC24_DownloadInvoice -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
