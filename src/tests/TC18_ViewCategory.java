@@ -46,11 +46,12 @@ public class TC18_ViewCategory {
 		
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
-		
+		WebElement category = driver.findElement(By.cssSelector("body > section:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1)"));
 		WebElement women = driver.findElement(By.cssSelector("body > section:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > h4:nth-child(1) > a:nth-child(1)"));
 		women.click();										
 		//js.executeScript("javascript:window.scrollBy(250,250)");
 		Assert.assertEquals("WOMEN", women.getText());
+		Assert.assertEquals("CATEGORY", category.getText());
 		
 	}
 	

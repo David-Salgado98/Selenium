@@ -323,7 +323,7 @@ public class TC01_RegisterUser {
 	public void LastStep() throws InterruptedException {
 		System.out.println("END");
 		// Script Ends and closes browser
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		driver.close();
 	}
 
