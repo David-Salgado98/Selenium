@@ -68,7 +68,7 @@ public class TC15_PlaceOrderAlreadyRegister {
 						driver.findElement(By.cssSelector("input[data-qa='signup-email']")).sendKeys(correo);
 						signup.click();
 						WebElement firstname = new WebDriverWait(driver, Duration.ofSeconds(10))
-								.until(ExpectedConditions.elementToBeClickable(By.id("first_name")));
+								.until(ExpectedConditions.presenceOfElementLocated(By.id("first_name")));
 				       
 						driver.findElement(By.id("password")).sendKeys(password);
 						firstname.sendKeys("Eleanor");
@@ -112,7 +112,7 @@ public class TC15_PlaceOrderAlreadyRegister {
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 					WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
+						.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
 					Assert.assertTrue(name.getText().contains("Logged in as "+nombre));
 					Reporter.log("The name is showed<br>");
 				}
@@ -292,7 +292,7 @@ public class TC15_PlaceOrderAlreadyRegister {
 				
 				delete.click();
 				WebElement promt = new WebDriverWait(driver, Duration.ofSeconds(10))
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("h2[class='title text-center'] b")));
+						.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("h2[class='title text-center'] b")));
 				Assert.assertTrue(promt.getText().contains("ACCOUNT DELETED"));
 				Reporter.log("The account is deleted<br>");
 				

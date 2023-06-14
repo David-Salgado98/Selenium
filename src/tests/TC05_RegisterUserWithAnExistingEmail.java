@@ -67,7 +67,7 @@ public class TC05_RegisterUserWithAnExistingEmail {
 			driver.findElement(By.cssSelector("input[data-qa='signup-email']")).sendKeys(correo);
 			signup.click();
 			WebElement firstname = new WebDriverWait(driver, Duration.ofSeconds(10))
-					.until(ExpectedConditions.elementToBeClickable(By.id("first_name")));
+					.until(ExpectedConditions.presenceOfElementLocated(By.id("first_name")));
 	       
 			driver.findElement(By.id("password")).sendKeys(password);
 			firstname.sendKeys("Eleanor");
@@ -107,11 +107,15 @@ public class TC05_RegisterUserWithAnExistingEmail {
 	public void S003_LoginName() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;	
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
-		
+		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+		try {
 		driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 	WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
-			.until(ExpectedConditions.elementToBeClickable(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
+			.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
 	Assert.assertTrue(name.getText().contains("Logged in as "+nombre));
 	Reporter.log("The name is showed<br>");
 	}
@@ -121,8 +125,14 @@ public class TC05_RegisterUserWithAnExistingEmail {
 	@Test(description = "Logoutfrom create account", priority = 4)
 
 	public void S007_Logout() throws InterruptedException {
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/logout']")).click();
+		try{driver.findElement(By.cssSelector("a[href='/logout']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		
 		
 		WebElement logout = new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -134,8 +144,15 @@ public class TC05_RegisterUserWithAnExistingEmail {
 	@Test(description = "Go to Home", priority = 5)
 
 	public void S005_GoHome() throws InterruptedException {
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("li:nth-child(1) a:nth-child(1)")).click();
+		try{
+			driver.findElement(By.cssSelector("li:nth-child(1) a:nth-child(1)")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		WebElement login = new WebDriverWait(driver, Duration.ofSeconds(10))
 				
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/login']")));
@@ -150,7 +167,7 @@ public class TC05_RegisterUserWithAnExistingEmail {
 		driver.findElement(By.cssSelector("a[href='/login']")).click();
 		WebElement login = new WebDriverWait(driver, Duration.ofSeconds(10))
 				
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='signup-form'] h2")));
+				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='signup-form'] h2")));
 		Assert.assertEquals("New User Signup!", login.getText());
 		Reporter.log("Login correctly<br>");
 	}
@@ -167,7 +184,7 @@ public class TC05_RegisterUserWithAnExistingEmail {
 			signup.click();
 			
 			WebElement error = new WebDriverWait(driver, Duration.ofSeconds(10))
-					.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > form:nth-child(2) > p:nth-child(5)")));
+					.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form[@action='/signup']//p")));
 		Assert.assertEquals("Email Address already exist!",error.getText());
 		Reporter.log("The error message was displayed Succesfull<br>");
 	}

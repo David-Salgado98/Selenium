@@ -46,7 +46,7 @@ public class TC22_RecomendenItems {
 		driver.findElement(By.cssSelector("body")).click();
 		js.executeScript("javascript:window.scrollBy(0,document.body.scrollHeight-800)");
 		WebElement recommended = new WebDriverWait(driver, Duration.ofSeconds(10))
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='recommended_items'] h2[class='title text-center']"))); 
+				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='recommended_items'] h2[class='title text-center']"))); 
 		
 		Assert.assertTrue(recommended.getText().contains("RECOMMENDED ITEMS"));
 		Reporter.log("Item Recommended Items Showed Correctly  <br>");

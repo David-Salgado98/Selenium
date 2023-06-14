@@ -68,7 +68,7 @@ public class TC16_PlaceOrderJustLogin {
 						driver.findElement(By.cssSelector("input[data-qa='signup-email']")).sendKeys(correo);
 						signup.click();
 						WebElement firstname = new WebDriverWait(driver, Duration.ofSeconds(10))
-								.until(ExpectedConditions.elementToBeClickable(By.id("first_name")));
+								.until(ExpectedConditions.presenceOfElementLocated(By.id("first_name")));
 				       
 						driver.findElement(By.id("password")).sendKeys(password);
 						firstname.sendKeys("Eleanor");
@@ -132,7 +132,7 @@ public class TC16_PlaceOrderJustLogin {
 					loginLink.click();
 					WebElement login = new WebDriverWait(driver, Duration.ofSeconds(10))
 							
-							.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='login-form'] h2")));
+							.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='login-form'] h2")));
 					Assert.assertEquals("Login to your account", login.getText());
 					Reporter.log("Login correctly<br>");
 				}
@@ -156,7 +156,7 @@ public class TC16_PlaceOrderJustLogin {
 				public void S008_LoginName() throws InterruptedException {
 					
 				WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
+						.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
 				Assert.assertTrue(name.getText().contains("Logged in as "+nombre));
 				Reporter.log("The name is showed<br>");
 				}
@@ -213,11 +213,18 @@ public class TC16_PlaceOrderJustLogin {
 				
 				@Test(description = "Add product to the cart2", priority = 10)
 				public void S005_AddToTheCart2() {
-					
+					JavascriptExecutor js = (JavascriptExecutor) driver;
+					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+					driver.findElement(By.cssSelector("body")).click();
 					WebElement add = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[3]/div[1]/div[1]/div[1]/a[1]")));
 					
 					add.click();
+					try {
+						//add.click();
+					}catch (Exception e) {
+						// TODO: handle exception
+					}
 					
 					
 					WebElement promt = new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -301,8 +308,16 @@ public class TC16_PlaceOrderJustLogin {
 					
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("javascript:window.scrollBy(250,250)");
+					
+					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+					driver.findElement(By.cssSelector("body")).click();
 					driver.findElement(By.cssSelector("textarea[name='message']")).sendKeys("Place Order");
 					driver.findElement(By.cssSelector(".btn.btn-default.check_out")).click();
+					try{ driver.findElement(By.cssSelector(".btn.btn-default.check_out")).click();
+					}catch (Exception e) {
+						// TODO: handle exception
+					
+					}
 					
 					WebElement submit = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#submit")));
@@ -337,7 +352,7 @@ public class TC16_PlaceOrderJustLogin {
 				
 				delete.click();
 				WebElement promt = new WebDriverWait(driver, Duration.ofSeconds(10))
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("h2[class='title text-center'] b")));
+						.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("h2[class='title text-center'] b")));
 				Assert.assertTrue(promt.getText().contains("ACCOUNT DELETED"));
 				Reporter.log("The account is deleted<br>");
 				

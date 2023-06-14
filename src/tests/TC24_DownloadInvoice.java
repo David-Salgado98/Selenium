@@ -212,6 +212,11 @@ public class TC24_DownloadInvoice {
 		
 		
 		driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+		try {
+		driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		
 		WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
 			.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));

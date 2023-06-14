@@ -66,7 +66,7 @@ public class TC20_SearchProductsandVerifyCart {
 			driver.findElement(By.cssSelector("input[data-qa='signup-email']")).sendKeys(correo);
 			signup.click();
 			WebElement firstname = new WebDriverWait(driver, Duration.ofSeconds(10))
-					.until(ExpectedConditions.elementToBeClickable(By.id("first_name")));
+					.until(ExpectedConditions.presenceOfElementLocated(By.id("first_name")));
 	       
 			driver.findElement(By.id("password")).sendKeys(password);
 			firstname.sendKeys("Eleanor");
@@ -110,7 +110,7 @@ public class TC20_SearchProductsandVerifyCart {
 		driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 		driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 		WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
-			.until(ExpectedConditions.elementToBeClickable(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
+			.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
 		Assert.assertTrue(name.getText().contains("Logged in as "+nombre));
 		Reporter.log("The name is showed<br>");
 	}
@@ -185,6 +185,11 @@ public class TC20_SearchProductsandVerifyCart {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]/a[1]")));
 		
 		add.click();
+		try {
+			add.click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		
 		WebElement promt = new WebDriverWait(driver, Duration.ofSeconds(10))
 		.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".modal-title.w-100")));
@@ -225,7 +230,7 @@ public class TC20_SearchProductsandVerifyCart {
 		driver.findElement(By.cssSelector("a[href='/login']")).click();
 		WebElement login = new WebDriverWait(driver, Duration.ofSeconds(10))
 				
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='login-form'] h2")));
+				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='login-form'] h2")));
 		Assert.assertEquals("Login to your account", login.getText());
 		Reporter.log("Login correctly<br>");
 	}

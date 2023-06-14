@@ -48,7 +48,11 @@ public class TC08_VerifyAllProducts {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		try {
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(5))
 	       		  .pollingEvery(Duration.ofSeconds(1))
@@ -65,9 +69,11 @@ public class TC08_VerifyAllProducts {
 	
 	@Test(description = "Review All Products", priority = 3)
 	public void S003_ListDisplay() {
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		WebElement lista = new WebDriverWait(driver, Duration.ofSeconds(10))
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".features_items"))); 
+				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".features_items"))); 
 		
 		Assert.assertTrue(lista.isDisplayed());
 		Reporter.log("Item Resume Showed Correctly  <br>");
@@ -78,6 +84,11 @@ public class TC08_VerifyAllProducts {
 		
 		WebElement details = driver.findElement(By.cssSelector("a[href='/product_details/1']"));
 		details.click();
+		try {
+			details.click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		WebElement description = new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='product-information'] h2"))); 
 		String text3 = description.getText();
@@ -90,11 +101,11 @@ public class TC08_VerifyAllProducts {
 		
 		
 		WebElement productName = driver.findElement(By.cssSelector("div[class='product-information'] h2"));
-		WebElement category = driver.findElement(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > p:nth-child(3)"));
+		WebElement category = driver.findElement(By.xpath("//div[@class='product-details']//p[1]"));
 		WebElement price = driver.findElement(By.cssSelector("div[class='product-information'] span span"));
-		WebElement avalability = driver.findElement(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > p:nth-child(6)"));
-		WebElement condition = driver.findElement(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > p:nth-child(7)"));
-		WebElement brand = driver.findElement(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > p:nth-child(8)"));
+		WebElement avalability = driver.findElement(By.xpath("//div[@class='product-details']//p[2]"));
+		WebElement condition = driver.findElement(By.xpath("//div[@class='product-details']//p[3]"));
+		WebElement brand = driver.findElement(By.xpath("//div[@class='product-details']//p[4]"));
 		
 		Assert.assertTrue(productName.getText().contains("Blue Top"));
 		Assert.assertTrue(category.getText().contains("Category: Women > Tops"));

@@ -67,10 +67,9 @@ public class TC12_AddToTheCart {
 	public void S003_AddToTheCart() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("javascript:window.scrollBy(250,550)");
-		WebElement add = new WebDriverWait(driver, Duration.ofSeconds(10))
+		WebElement add = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]/a[1]")));
 		
-		add.click();
 		add.click();
 		WebElement promt = new WebDriverWait(driver, Duration.ofSeconds(10))
 		.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".modal-title.w-100")));

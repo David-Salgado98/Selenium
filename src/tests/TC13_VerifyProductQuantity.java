@@ -65,11 +65,18 @@ public class TC13_VerifyProductQuantity {
 	
 	@Test(description = "Click to see more on the product", priority = 3)
 	public void S003_SeeMore() {
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		WebElement details = driver.findElement(By.cssSelector("a[href='/product_details/1']"));
 		details.click();
+		try {
+			details.click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		WebElement description = new WebDriverWait(driver, Duration.ofSeconds(10))
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='product-information'] h2"))); 
+				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='product-information'] h2"))); 
 		String text3 = description.getText();
 		Assert.assertTrue(text3.contains("Blue"));
 		Reporter.log("Item Resume Showed Correctly  <br>");
@@ -78,7 +85,7 @@ public class TC13_VerifyProductQuantity {
 	@Test(description = "Select quantity and size", priority = 4)
 	public void S004_SelectTshirt() throws InterruptedException {
 		WebElement size = new WebDriverWait(driver, Duration.ofSeconds(10))
-				.until(ExpectedConditions.elementToBeClickable(By.id("quantity"))); 
+				.until(ExpectedConditions.presenceOfElementLocated(By.id("quantity"))); 
 		
 		size.clear();
 		size.sendKeys("4");

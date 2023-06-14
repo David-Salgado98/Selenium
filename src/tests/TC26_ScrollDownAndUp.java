@@ -46,7 +46,7 @@ WebDriver driver = null;
 		driver.findElement(By.cssSelector("body")).click();
 		js.executeScript("javascript:window.scrollBy(0,document.body.scrollHeight)");
 		WebElement subscription = new WebDriverWait(driver, Duration.ofSeconds(10))
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='single-widget'] h2"))); 
+				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='single-widget'] h2"))); 
 		
 		Assert.assertTrue(subscription.getText().contains("SUBSCRIPTION"));
 		Reporter.log("Subscription Input Showed Correctly  <br>");

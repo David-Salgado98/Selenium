@@ -68,7 +68,7 @@ public class TC10_VerifySubscription {
 						driver.findElement(By.cssSelector("input[data-qa='signup-email']")).sendKeys(correo);
 						signup.click();
 						WebElement firstname = new WebDriverWait(driver, Duration.ofSeconds(10))
-								.until(ExpectedConditions.elementToBeClickable(By.id("first_name")));
+								.until(ExpectedConditions.presenceOfElementLocated(By.id("first_name")));
 				       
 						driver.findElement(By.id("password")).sendKeys(password);
 						firstname.sendKeys("Eleanor");
@@ -116,7 +116,7 @@ public class TC10_VerifySubscription {
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 				WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
+						.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
 				Assert.assertTrue(name.getText().contains(nombre));
 				Reporter.log("The name is showed<br>");
 				}
@@ -154,7 +154,7 @@ public class TC10_VerifySubscription {
 					subscribe.sendKeys(correo);
 					driver.findElement(By.cssSelector("#subscribe")).click();
 					WebElement alert = new WebDriverWait(driver, Duration.ofSeconds(10))
-							.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".alert-success.alert")));
+							.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".alert-success.alert")));
 					Assert.assertEquals("You have been successfully subscribed!", alert.getText());
 					Reporter.log("The subscription is correctly<br>");
 				}
