@@ -76,6 +76,11 @@ WebDriver driver = null;
 		
 		WebElement hm = driver.findElement(By.cssSelector("a[href='/brand_products/H&M']"));
 		hm.click();	
+		try{
+			hm.click();	
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		WebElement link = new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href='/brand_products/H&M']")));
 		

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test15</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 14 00:49:39 CST 2023</td>
+<td>Started on:</td><td>Wed Jun 14 12:23:23 CST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>61 seconds (61010 ms)</td>
+<tr><td>Total time:</td><td>577 seconds (577720 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,298 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.AfterClass()'><b>AfterClass</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [30cbcfd34b332fba1deded4153d703b3, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.111, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\DAVIDA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65393}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65393/devtoo..., se:cdpVersion: 114.0.5735.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 30cbcfd34b332fba1deded4153d703b3
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:419)
+	at tests.TC15_PlaceOrderAlreadyRegister.AfterClass(TC15_PlaceOrderAlreadyRegister.java:311)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 38 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace267463507", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace267463507'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [30cbcfd34b332fba1deded4153d703b3, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.111, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\DAVIDA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65393}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65393/devtoo..., se:cdpVersion: 114.0.5735.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 30cbcfd34b332fba1deded4153d703b3
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:419)
+	at tests.TC15_PlaceOrderAlreadyRegister.AfterClass(TC15_PlaceOrderAlreadyRegister.java:311)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.afterRun(TestRunner.java:877)
+	at org.testng.TestRunner.run(TestRunner.java:599)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 38 more
+</pre></div></td>
+<td>183</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S011_ProcedToOrderComplete()'><b>S011_ProcedToOrderComplete</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Proceed to complete order</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [30cbcfd34b332fba1deded4153d703b3, clickElement {id=16B99C2C5BA06D393E6107CFD92751C9_element_180}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.111, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\DAVIDA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65393}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65393/devtoo..., se:cdpVersion: 114.0.5735.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (30cbcfd34b332fba1deded4153d703b3)] -&gt; css selector: #submit]
+Session ID: 30cbcfd34b332fba1deded4153d703b3
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.TC15_PlaceOrderAlreadyRegister.S011_ProcedToOrderComplete(TC15_PlaceOrderAlreadyRegister.java:280)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 41 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1988351538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1988351538'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [30cbcfd34b332fba1deded4153d703b3, clickElement {id=16B99C2C5BA06D393E6107CFD92751C9_element_180}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.111, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\DAVIDA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65393}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65393/devtoo..., se:cdpVersion: 114.0.5735.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (30cbcfd34b332fba1deded4153d703b3)] -&gt; css selector: #submit]
+Session ID: 30cbcfd34b332fba1deded4153d703b3
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.TC15_PlaceOrderAlreadyRegister.S011_ProcedToOrderComplete(TC15_PlaceOrderAlreadyRegister.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 41 more
+</pre></div></td>
+<td>180</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S021_DeleteAccount()'><b>S021_DeleteAccount</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Delete Account</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [30cbcfd34b332fba1deded4153d703b3, findElement {using=css selector, value=a[href=&apos;/delete_account&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.111, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\DAVIDA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65393}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65393/devtoo..., se:cdpVersion: 114.0.5735.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 30cbcfd34b332fba1deded4153d703b3
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:197)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:193)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at tests.TC15_PlaceOrderAlreadyRegister.S021_DeleteAccount(TC15_PlaceOrderAlreadyRegister.java:291)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 46 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1583625218", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1583625218'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [30cbcfd34b332fba1deded4153d703b3, findElement {using=css selector, value=a[href=&apos;/delete_account&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.111, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\DAVIDA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65393}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65393/devtoo..., se:cdpVersion: 114.0.5735.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 30cbcfd34b332fba1deded4153d703b3
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:197)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:193)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at tests.TC15_PlaceOrderAlreadyRegister.S021_DeleteAccount(TC15_PlaceOrderAlreadyRegister.java:291)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 46 more
+</pre></div></td>
+<td>180</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,159 +367,135 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S005_AddToTheCart2()'><b>S005_AddToTheCart2</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Add product to the cart2<br/>
-<a href="#Output-1634118341" onClick='toggleBox("Output-1634118341", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1634118341" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1634118341">
-Item Added Correctly  <br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S008_VerifyTotal()'><b>S008_VerifyTotal</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Verify price</td>
-<td></td>
-<td>0</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S007_VerifyItems()'><b>S007_VerifyItems</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Verify Items</td>
-<td></td>
-<td>1</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S003_LoginName()'><b>S003_LoginName</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Check the login name<br/>
-<a href="#Output-1367186645" onClick='toggleBox("Output-1367186645", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1367186645" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1367186645">
-The name is showed<br><br/>
-</div>
-</td>
-<td></td>
-<td>3</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S010_Comment()'><b>S010_Comment</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Proceed to shipping<br/>
-<a href="#Output-1563620827" onClick='toggleBox("Output-1563620827", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1563620827" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1563620827">
-shipping page displayed and terms accepted <br><br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S021_DeleteAccount()'><b>S021_DeleteAccount</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Delete Account<br/>
-<a href="#Output-524136404" onClick='toggleBox("Output-524136404", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-524136404" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-524136404">
-The account is deleted<br><br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S002_CreateUser()'><b>S002_CreateUser</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Create User<br/>
-<a href="#Output-98984875" onClick='toggleBox("Output-98984875", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-98984875" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-98984875">
-The account is created<br><br/>
-</div>
-</td>
-<td></td>
-<td>13</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
 <td title='tests.TC15_PlaceOrderAlreadyRegister.S008_Summary()'><b>S008_Summary</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Click proceed to checkout Again<br/>
-<a href="#Output-1785348036" onClick='toggleBox("Output-1785348036", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1632298219" onClick='toggleBox("Output-1632298219", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1785348036" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1785348036">
+<a href="#Output-1632298219" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1632298219">
 address page displayed <br><br/>
 </div>
 </td>
 <td></td>
-<td>2</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
+<td>3</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
 <tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S006_ViewCart()'><b>S006_ViewCart</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: View Cart<br/>
-<a href="#Output-1148596420" onClick='toggleBox("Output-1148596420", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1148596420" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1148596420">
-Summary page displayed <br><br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S003_AddToTheCart()'><b>S003_AddToTheCart</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Add product to the cart<br/>
-<a href="#Output-1593290287" onClick='toggleBox("Output-1593290287", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1593290287" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1593290287">
-Item Added Correctly  <br><br/>
-</div>
-</td>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S007_VerifyItems()'><b>S007_VerifyItems</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Verify Items</td>
 <td></td>
 <td>0</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S001_GoWebpage()'><b>S001_GoWebpage</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Go to URL 'http://automationpractice.com/index.php'<br/>
-<a href="#Output-402265251" onClick='toggleBox("Output-402265251", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-402265251" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-402265251">
-The webpage loads correctly<br><br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
-<tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S002_ProductsClick()'><b>S002_ProductsClick</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Click on Products Link<br/>
-<a href="#Output-2078726843" onClick='toggleBox("Output-2078726843", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2078726843" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2078726843">
-The Products page loads correctly<br><br/>
-</div>
-</td>
-<td></td>
-<td>15</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
 <tr>
 <td title='tests.TC15_PlaceOrderAlreadyRegister.S004_ContinueShopping()'><b>S004_ContinueShopping</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Continue Shopping<br/>
-<a href="#Output-1733285169" onClick='toggleBox("Output-1733285169", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1898748879" onClick='toggleBox("Output-1898748879", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1733285169" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1733285169">
+<a href="#Output-1898748879" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1898748879">
 Continue Shopping  <br><br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
 <tr>
-<td title='tests.TC15_PlaceOrderAlreadyRegister.S011_ProcedToOrderComplete()'><b>S011_ProcedToOrderComplete</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Proceed to complete order<br/>
-<a href="#Output-499302716" onClick='toggleBox("Output-499302716", this, "Show output", "Hide output");'>Show output</a>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S003_AddToTheCart()'><b>S003_AddToTheCart</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Add product to the cart<br/>
+<a href="#Output-358945794" onClick='toggleBox("Output-358945794", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-499302716" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-499302716">
-payment added correctly <br><br/>
+<a href="#Output-358945794" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-358945794">
+Item Added Correctly  <br><br/>
 </div>
 </td>
 <td></td>
-<td>3</td>
-<td>tests.TC15_PlaceOrderAlreadyRegister@53fb3dab</td></tr>
+<td>0</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S006_ViewCart()'><b>S006_ViewCart</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: View Cart<br/>
+<a href="#Output-546452352" onClick='toggleBox("Output-546452352", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-546452352" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-546452352">
+Summary page displayed <br><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S003_LoginName()'><b>S003_LoginName</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Check the login name<br/>
+<a href="#Output-2136493324" onClick='toggleBox("Output-2136493324", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2136493324" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2136493324">
+The name is showed<br><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S002_CreateUser()'><b>S002_CreateUser</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Create User<br/>
+<a href="#Output-1389638849" onClick='toggleBox("Output-1389638849", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1389638849" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1389638849">
+The account is created<br><br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S010_Comment()'><b>S010_Comment</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Proceed to shipping<br/>
+<a href="#Output-451573149" onClick='toggleBox("Output-451573149", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-451573149" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-451573149">
+shipping page displayed and terms accepted <br><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S001_GoWebpage()'><b>S001_GoWebpage</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Go to URL 'http://automationpractice.com/index.php'<br/>
+<a href="#Output-1279013285" onClick='toggleBox("Output-1279013285", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1279013285" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1279013285">
+The webpage loads correctly<br><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S005_AddToTheCart2()'><b>S005_AddToTheCart2</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Add product to the cart2<br/>
+<a href="#Output-483582792" onClick='toggleBox("Output-483582792", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-483582792" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-483582792">
+Item Added Correctly  <br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S002_ProductsClick()'><b>S002_ProductsClick</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Click on Products Link<br/>
+<a href="#Output-9089585" onClick='toggleBox("Output-9089585", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-9089585" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-9089585">
+The Products page loads correctly<br><br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
+<tr>
+<td title='tests.TC15_PlaceOrderAlreadyRegister.S008_VerifyTotal()'><b>S008_VerifyTotal</b><br>Test class: tests.TC15_PlaceOrderAlreadyRegister<br>Test method: Verify price</td>
+<td></td>
+<td>0</td>
+<td>tests.TC15_PlaceOrderAlreadyRegister@cb0755b</td></tr>
 </table><p>
 </body>
 </html>

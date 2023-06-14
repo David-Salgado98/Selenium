@@ -49,7 +49,11 @@ public class TC09_SerchProduct {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		try {
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(5))
 	       		  .pollingEvery(Duration.ofSeconds(1))
@@ -64,8 +68,8 @@ public class TC09_SerchProduct {
 		Reporter.log("The Products page loads correctly<br>");
 	}
 	
-	@Test(description = "search the same item on the search bar", priority = 4)
-	public void S004_SearchItem() throws InterruptedException {
+	@Test(description = "search the same item on the search bar", priority = 3)
+	public void S003_SearchItem() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
@@ -75,7 +79,7 @@ public class TC09_SerchProduct {
 		WebElement product = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='productinfo text-center']//p[contains(text(),'Pure Cotton V-Neck T-Shirt')]")));
 		
-		js.executeScript("javascript:window.scrollBy(250,550)");
+		js.executeScript("javascript:window.scrollBy(0,550)");
 		
 		Assert.assertTrue(product.getText().contains("Cotton"));
 		Reporter.log("Item searched matches with the item displayed <br>");

@@ -56,7 +56,15 @@ public class TC06_ContactUsForm {
 
 	@Test(description = "Click on Contact Us button", priority = 2)
 	public void S002_LogInClick() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/contact_us']")).click();
+		try{ 
+			driver.findElement(By.cssSelector("a[href='/contact_us']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(10))
 	       		  .pollingEvery(Duration.ofSeconds(2))
@@ -137,7 +145,11 @@ public class TC06_ContactUsForm {
 		driver.findElement(By.cssSelector("body")).click();
 		WebElement home = driver.findElement(By.cssSelector(".fa.fa-angle-double-left"));
 		home.click();
+		try {
 		home.click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		
 		WebElement inicio = new WebDriverWait(driver, Duration.ofSeconds(10))
 		.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='features_items'] h2[class='title text-center']")));

@@ -59,7 +59,11 @@ public class TC21_AddAReview {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		try {
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(5))
 	       		  .pollingEvery(Duration.ofSeconds(1))
@@ -96,7 +100,7 @@ public class TC21_AddAReview {
 	@Test(description = "Check the review form", priority = 4)
 	public void S004_CheckReviewForm() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("javascript:window.scrollBy(250,550)");
+		js.executeScript("javascript:window.scrollBy(0,550)");
 		
 		WebElement description = new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='#reviews']"))); 

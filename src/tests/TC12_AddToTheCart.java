@@ -48,7 +48,11 @@ public class TC12_AddToTheCart {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		try {
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(5))
 	       		  .pollingEvery(Duration.ofSeconds(1))
@@ -66,7 +70,7 @@ public class TC12_AddToTheCart {
 	@Test(description = "Add product to the cart", priority = 3)
 	public void S003_AddToTheCart() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("javascript:window.scrollBy(250,550)");
+		js.executeScript("javascript:window.scrollBy(0,550)");
 		WebElement add = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]/a[1]")));
 		
@@ -109,7 +113,7 @@ public class TC12_AddToTheCart {
 	public void S006_ViewCart() {
 		
 		driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
-		WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+		new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 		String text4 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
 		Assert.assertTrue(text4.contains("Blue"));

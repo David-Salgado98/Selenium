@@ -67,10 +67,17 @@ public class TC22_RecomendenItems {
 		Reporter.log("Item Added Correctly  <br>");
 	}
 	@Test(description = "View Cart", priority = 4)
-	public void S006_ViewCart() {
-		
+	public void S004_ViewCart() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
-		WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+		try {
+		driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 		String text4 = driver.findElement(By.xpath("//td[@class='cart_description']//h4//a")).getText();
 		Assert.assertTrue(text4.contains(producto));
@@ -78,7 +85,7 @@ public class TC22_RecomendenItems {
 	}
 	
 	@Test(description = "Verify Items", priority = 5)
-	public void S007_VerifyItems() throws InterruptedException {
+	public void S005_VerifyItems() throws InterruptedException {
 		
 		String nombre1 = driver.findElement(By.xpath("//td[@class='cart_description']//h4//a")).getText();
 		

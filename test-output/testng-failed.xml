@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test12(failed)">
-    <classes>
-      <class name="tests.TC12_AddToTheCart">
-        <methods>
-          <include name="S006_ViewCart"/>
-          <include name="AfterClass"/>
-          <include name="S003_AddToTheCart"/>
-          <include name="S004_ContinueShopping"/>
-          <include name="S008_VerifyNewPrice"/>
-          <include name="S007_VerifyItems"/>
-          <include name="S000_BeforeTest"/>
-        </methods>
-      </class> <!-- tests.TC12_AddToTheCart -->
-    </classes>
-  </test> <!-- Test12(failed) -->
-  <test thread-count="5" name="Test14(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="tests.TC14_PlaceOrderWhileRigisterCheckout">
         <methods>
+          <include name="S009_ViewCart"/>
           <include name="S003_LoginName"/>
-          <include name="AfterClass"/>
-          <include name="S021_DeleteAccount"/>
+          <include name="S014_VerifyItemsAfterLogin"/>
+          <include name="S012_Summary"/>
+          <include name="S013_ViewCartAfterLogin"/>
+          <include name="S018_ProcedToOrderComplete"/>
+          <include name="S016_VerifyTotal"/>
+          <include name="S019_DeleteAccount"/>
           <include name="S000_FirstStep"/>
+          <include name="S006_AddToTheCart"/>
+          <include name="S005_ProductsClick"/>
+          <include name="S008_AddToTheCart2"/>
+          <include name="S010_VerifyItems"/>
+          <include name="S011_Summary"/>
+          <include name="S015_CartResume"/>
+          <include name="S007_ContinueShopping"/>
+          <include name="AfterClass"/>
+          <include name="S017_Comment"/>
+          <include name="S004_Logout"/>
         </methods>
       </class> <!-- tests.TC14_PlaceOrderWhileRigisterCheckout -->
     </classes>
-  </test> <!-- Test14(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -106,12 +106,16 @@ public class TC16_PlaceOrderJustLogin {
 				
 				@Test(description = "Logoutfrom create account", priority = 3)
 
-				public void S004_Logout() throws InterruptedException {
+				public void S003_Logout() throws InterruptedException {
 					JavascriptExecutor js = (JavascriptExecutor) driver;	
 					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 					
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+					try {
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+					}catch (Exception e) {
+						// TODO: handle exception
+					}
 					WebElement logoutLink = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/logout']")));
 					logoutLink.click();
@@ -125,7 +129,7 @@ public class TC16_PlaceOrderJustLogin {
 				
 				@Test(description = "Click login", priority = 4)
 
-				public void S006_GoLogin() throws InterruptedException {
+				public void S004_GoLogin() throws InterruptedException {
 					WebElement loginLink = new WebDriverWait(driver, Duration.ofSeconds(10))
 							
 							.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/login']")));
@@ -139,7 +143,7 @@ public class TC16_PlaceOrderJustLogin {
 				
 				@Test(description = "Login create account", priority = 5)
 
-				public void S007_TypeEmail() throws InterruptedException {
+				public void S005_TypeEmail() throws InterruptedException {
 					
 					
 					driver.findElement(By.cssSelector("input[data-qa='login-email']")).sendKeys(correo);
@@ -153,7 +157,7 @@ public class TC16_PlaceOrderJustLogin {
 				}
 				
 				@Test(description = "Check the login name", priority = 6)
-				public void S008_LoginName() throws InterruptedException {
+				public void S006_LoginName() throws InterruptedException {
 					
 				WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
 						.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
@@ -169,7 +173,11 @@ public class TC16_PlaceOrderJustLogin {
 					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 					driver.findElement(By.cssSelector("body")).click();
 					driver.findElement(By.cssSelector("a[href='/products']")).click();
+					try {
 					driver.findElement(By.cssSelector("a[href='/products']")).click();
+					}catch (Exception e) {
+						// TODO: handle exception
+					}
 					Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 				       		  .withTimeout(Duration.ofSeconds(5))
 				       		  .pollingEvery(Duration.ofSeconds(1))
@@ -185,7 +193,7 @@ public class TC16_PlaceOrderJustLogin {
 				}
 				
 				@Test(description = "Add product to the cart", priority = 8)
-				public void S003_AddToTheCart() {
+				public void S008_AddToTheCart() {
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("javascript:window.scrollBy(0,550)");
 					WebElement add = new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -201,7 +209,7 @@ public class TC16_PlaceOrderJustLogin {
 				}
 				
 				@Test(description = "Continue Shopping", priority = 9)
-				public void S004_ContinueShopping() {
+				public void S009_ContinueShopping() {
 					
 					WebElement conti = driver.findElement(By.cssSelector(".btn.btn-success.close-modal.btn-block"));
 					conti.click();
@@ -212,7 +220,7 @@ public class TC16_PlaceOrderJustLogin {
 				}
 				
 				@Test(description = "Add product to the cart2", priority = 10)
-				public void S005_AddToTheCart2() {
+				public void S010_AddToTheCart2() {
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 					driver.findElement(By.cssSelector("body")).click();
@@ -235,10 +243,10 @@ public class TC16_PlaceOrderJustLogin {
 				}
 				
 				@Test(description = "View Cart", priority = 11)
-				public void S006_ViewCart() {
+				public void S011_ViewCart() {
 					
 					driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
-					WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+					 new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 					String text4 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
 					Assert.assertTrue(text4.contains("Blue"));
@@ -246,7 +254,7 @@ public class TC16_PlaceOrderJustLogin {
 				}
 				
 				@Test(description = "Verify Items", priority = 12)
-				public void S007_VerifyItems() throws InterruptedException {
+				public void S012_VerifyItems() throws InterruptedException {
 					
 					String nombre1 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
 					String nombre2 = driver.findElement(By.cssSelector("a[href='/product_details/2']")).getText();
@@ -258,7 +266,7 @@ public class TC16_PlaceOrderJustLogin {
 				}
 				
 				@Test(description = "Click proceed to checkout Again", priority = 13)
-				public void S008_Summary() throws InterruptedException {
+				public void S013_Summary() throws InterruptedException {
 					driver.findElement(By.cssSelector(".btn.btn-default.check_out")).click();
 					WebElement address = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ul[id='address_delivery'] li:nth-child(4)")));
@@ -304,10 +312,10 @@ public class TC16_PlaceOrderJustLogin {
 				}
 				
 				@Test(description = "Proceed to shipping", priority = 15)
-				public void S010_Comment() throws InterruptedException {
+				public void S015_Comment() throws InterruptedException {
 					
 					JavascriptExecutor js = (JavascriptExecutor) driver;
-					js.executeScript("javascript:window.scrollBy(250,250)");
+					js.executeScript("javascript:window.scrollBy(0,250)");
 					
 					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 					driver.findElement(By.cssSelector("body")).click();
@@ -330,8 +338,10 @@ public class TC16_PlaceOrderJustLogin {
 				
 
 				@Test(description = "Proceed to complete order", priority = 16)
-				public void S011_ProcedToOrderComplete() throws InterruptedException {
-					
+				public void S016_ProcedToOrderComplete() throws InterruptedException {
+					JavascriptExecutor js = (JavascriptExecutor) driver;
+					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+					driver.findElement(By.cssSelector("body")).click();
 					driver.findElement(By.name("name_on_card")).sendKeys("Eleanor Rossvelt");
 					driver.findElement(By.name("card_number")).sendKeys("1111222233334444");
 					driver.findElement(By.name("cvc")).sendKeys("123");
@@ -346,7 +356,7 @@ public class TC16_PlaceOrderJustLogin {
 				}
 				
 				@Test(description = "Delete Account", priority = 17)
-				public void S021_DeleteAccount() throws InterruptedException {
+				public void S017_DeleteAccount() throws InterruptedException {
 					WebElement delete = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href='/delete_account']")));
 				

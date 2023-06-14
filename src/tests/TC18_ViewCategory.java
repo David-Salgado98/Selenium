@@ -46,9 +46,14 @@ public class TC18_ViewCategory {
 		
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
-		WebElement category = driver.findElement(By.cssSelector("body > section:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1)"));
-		WebElement women = driver.findElement(By.cssSelector("body > section:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > h4:nth-child(1) > a:nth-child(1)"));
+		WebElement category = driver.findElement(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-3']/div[@class='left-sidebar']/h2[1]"));
+		WebElement women = driver.findElement(By.xpath("//div[@class='panel-group category-products']//div[1]//div[1]//h4[1]"));
 		women.click();										
+		try{ 
+			women.click();										
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		//js.executeScript("javascript:window.scrollBy(250,250)");
 		Assert.assertEquals("WOMEN", women.getText());
 		Assert.assertEquals("CATEGORY", category.getText());
@@ -81,8 +86,13 @@ public class TC18_ViewCategory {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		
-		WebElement men = driver.findElement(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > h4:nth-child(1) > a:nth-child(1)"));
+		WebElement men = driver.findElement(By.xpath("//a[normalize-space()='Men']"));
 		men.click();
+		try{
+			men.click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		//js.executeScript("javascript:window.scrollBy(250,250)");
 		Assert.assertEquals("MEN", men.getText());
 		

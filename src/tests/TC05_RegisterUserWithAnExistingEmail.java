@@ -124,12 +124,13 @@ public class TC05_RegisterUserWithAnExistingEmail {
 
 	@Test(description = "Logoutfrom create account", priority = 4)
 
-	public void S007_Logout() throws InterruptedException {
+	public void S004_Logout() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/logout']")).click();
-		try{driver.findElement(By.cssSelector("a[href='/logout']")).click();
+		try{
+			driver.findElement(By.cssSelector("a[href='/logout']")).click();
 		}catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -153,7 +154,7 @@ public class TC05_RegisterUserWithAnExistingEmail {
 		}catch (Exception e) {
 			// TODO: handle exception
 		}
-		WebElement login = new WebDriverWait(driver, Duration.ofSeconds(10))
+		 new WebDriverWait(driver, Duration.ofSeconds(10))
 				
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/login']")));
 		Assert.assertEquals("FEATURES ITEMS", driver.findElement(By.cssSelector("div[class='features_items'] h2[class='title text-center']")).getText());
@@ -174,7 +175,7 @@ public class TC05_RegisterUserWithAnExistingEmail {
 	
 	@Test(description = "Login create account", priority = 7)
 
-	public void S007_TypeEmail() throws InterruptedException {
+	public void S007_LoginAfterCreateUser() throws InterruptedException {
 		
 		
 		WebElement signup = new WebDriverWait(driver, Duration.ofSeconds(10))

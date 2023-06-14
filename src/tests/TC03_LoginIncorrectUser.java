@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.function.Function;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -70,12 +71,19 @@ public class TC03_LoginIncorrectUser {
 	@Test(description = "Login with invalid credentials", priority = 3)
 
 	public void S003_TypeEmail() throws InterruptedException {
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		
 		driver.findElement(By.cssSelector("input[data-qa='login-email']")).sendKeys(correo);
 		driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys(password);
 		
 		driver.findElement(By.cssSelector("button[data-qa='login-button']")).click();
+		try{
+			driver.findElement(By.cssSelector("button[data-qa='login-button']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		WebElement logout = new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > p:nth-child(4)")));
 		Assert.assertTrue(logout.getText().contains("Your email or password is incorrect!"));

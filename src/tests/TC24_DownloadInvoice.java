@@ -66,7 +66,11 @@ public class TC24_DownloadInvoice {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		try {
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(5))
 	       		  .pollingEvery(Duration.ofSeconds(1))
@@ -126,9 +130,16 @@ public class TC24_DownloadInvoice {
 	
 	@Test(description = "View Cart", priority = 6)
 	public void S006_ViewCart() {
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
-		WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+		try{
+			driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		 new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 		String text4 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
 		Assert.assertTrue(text4.contains("Blue"));
@@ -228,7 +239,7 @@ public class TC24_DownloadInvoice {
 	public void S011_ViewCart() {
 		
 		driver.findElement(By.cssSelector("a[href='/view_cart']")).click();
-		WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+		new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 		String text4 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
 		Assert.assertTrue(text4.contains("Blue"));
@@ -248,7 +259,7 @@ public class TC24_DownloadInvoice {
 	public void S013_Comment() throws InterruptedException {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("javascript:window.scrollBy(250,250)");
+		js.executeScript("javascript:window.scrollBy(0,250)");
 		driver.findElement(By.cssSelector("textarea[name='message']")).sendKeys("Place Order");
 		driver.findElement(By.cssSelector(".btn.btn-default.check_out")).click();
 		

@@ -108,7 +108,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				public void S003_LoginName() throws InterruptedException {
 					JavascriptExecutor js = (JavascriptExecutor) driver;	
 					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
-					
+					driver.findElement(By.cssSelector("body")).click();
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 					try {
 					driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
@@ -135,13 +135,17 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				}
 				
 				@Test(description = "Click on Products Link", priority = 5)
-				public void S002_ProductsClick() {
+				public void S005_ProductsClick() {
 					
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 					driver.findElement(By.cssSelector("body")).click();
 					driver.findElement(By.cssSelector("a[href='/products']")).click();
+					try {
 					driver.findElement(By.cssSelector("a[href='/products']")).click();
+					}catch (Exception e) {
+						// TODO: handle exception
+					}
 					Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 				       		  .withTimeout(Duration.ofSeconds(5))
 				       		  .pollingEvery(Duration.ofSeconds(1))
@@ -157,7 +161,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				}
 				
 				@Test(description = "Add product to the cart", priority = 6)
-				public void S003_AddToTheCart() {
+				public void S006_AddToTheCart() {
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("javascript:window.scrollBy(0,550)");
 					WebElement add = new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -173,7 +177,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				}
 				
 				@Test(description = "Continue Shopping", priority = 7)
-				public void S004_ContinueShopping() {
+				public void S007_ContinueShopping() {
 					
 					WebElement conti = driver.findElement(By.cssSelector(".btn.btn-success.close-modal.btn-block"));
 					conti.click();
@@ -184,7 +188,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				}
 				
 				@Test(description = "Add product to the cart2", priority = 8)
-				public void S005_AddToTheCart2() {
+				public void S008_AddToTheCart2() {
 					
 					WebElement add = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[3]/div[1]/div[1]/div[1]/a[1]")));
@@ -200,10 +204,10 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				}
 				
 				@Test(description = "View Cart", priority = 9)
-				public void S006_ViewCart() {
+				public void S009_ViewCart() {
 					
 					driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
-					WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+				new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 					String text4 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
 					Assert.assertTrue(text4.contains("Blue"));
@@ -211,7 +215,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				}
 				
 				@Test(description = "Verify Items", priority = 10)
-				public void S007_VerifyItems() throws InterruptedException {
+				public void S010_VerifyItems() throws InterruptedException {
 					
 					String nombre1 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
 					String nombre2 = driver.findElement(By.cssSelector("a[href='/product_details/2']")).getText();
@@ -224,7 +228,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				
 				
 				@Test(description = "Click proceed to checkout Again", priority = 11)
-				public void S008_Summary() throws InterruptedException {
+				public void S011_Summary() throws InterruptedException {
 					driver.findElement(By.cssSelector(".btn.btn-default.check_out")).click();
 					WebElement resume = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//u[normalize-space()='Register / Login']")));
@@ -253,7 +257,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				public void S013_ViewCartAfterLogin() {
 					
 					driver.findElement(By.xpath("//body[1]/header[1]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[3]/a[1]")).click();
-					WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+					new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 					String text4 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
 					Assert.assertTrue(text4.contains("Blue"));
@@ -282,7 +286,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				}
 				
 				@Test(description = "Verify price", priority = 16)
-				public void S015_VerifyTotal() throws InterruptedException {
+				public void S016_VerifyTotal() throws InterruptedException {
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("javascript:window.scrollBy(0,550)");
 					
@@ -319,7 +323,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				}
 				
 				@Test(description = "Proceed to shipping", priority = 17)
-				public void S010_Comment() throws InterruptedException {
+				public void S017_Comment() throws InterruptedException {
 					
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 					js.executeScript("javascript:window.scrollBy(250,250)");
@@ -337,7 +341,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				
 
 				@Test(description = "Proceed to complete order", priority = 18)
-				public void S011_ProcedToOrderComplete() throws InterruptedException {
+				public void S018_ProcedToOrderComplete() throws InterruptedException {
 					
 					driver.findElement(By.name("name_on_card")).sendKeys("Eleanor Rossvelt");
 					driver.findElement(By.name("card_number")).sendKeys("1111222233334444");
@@ -353,7 +357,7 @@ public class TC14_PlaceOrderWhileRigisterCheckout {
 				}
 				
 				@Test(description = "Delete Account", priority = 19)
-				public void S021_DeleteAccount() throws InterruptedException {
+				public void S019_DeleteAccount() throws InterruptedException {
 					WebElement delete = new WebDriverWait(driver, Duration.ofSeconds(10))
 							.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href='/delete_account']")));
 				

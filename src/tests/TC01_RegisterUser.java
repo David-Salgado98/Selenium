@@ -133,8 +133,8 @@ public class TC01_RegisterUser {
 
 	
 	
-	@Test(description = "Fill the Subscription Newsletter", priority = 9)
-	public void S009_SubscriptionNewsletter() {
+	@Test(description = "Fill the Subscription Newsletter", priority = 8)
+	public void S008_SubscriptionNewsletter() {
 		// Name
 		
 		WebElement news = driver.findElement(By.id("newsletter"));
@@ -143,8 +143,8 @@ public class TC01_RegisterUser {
 		Reporter.log("The newsletter is checked<br>");
 	}
 	
-	@Test(description = "Fill the Subscription Offers", priority = 10)
-	public void S010_SelectOffers() {
+	@Test(description = "Fill the Subscription Offers", priority = 9)
+	public void S009_SelectOffers() {
 		
 		WebElement news = driver.findElement(By.id("optin"));
 		news.click();
@@ -152,18 +152,18 @@ public class TC01_RegisterUser {
 		Reporter.log("The offers checkbox is checked<br>");
 	}
 	
-	@Test(description = "type the name un the 'name' box", priority = 11)
-	public void S008_NameValidation() {
+	@Test(description = "type the name un the 'name' box", priority = 10)
+	public void S010_NameValidation() {
 		// Name
 		 JavascriptExecutor js = (JavascriptExecutor) driver;
-	        js.executeScript("javascript:window.scrollBy(250,250)");
+	        js.executeScript("javascript:window.scrollBy(0,250)");
 		driver.findElement(By.name("first_name")).sendKeys(nombre);
 		Assert.assertEquals(nombre, driver.findElement(By.name("first_name")).getAttribute("value"));
 		Reporter.log("The name typed is shown<br>");
 	}
 
-	@Test(description = "type the  last name un the ' last name' box", priority = 12)
-	public void S009_LastNameVaidation() {
+	@Test(description = "type the  last name un the ' last name' box", priority = 11)
+	public void S011_LastNameVaidation() {
 		// Last Name
 		driver.findElement(By.name("last_name")).sendKeys(apellido);
 		Assert.assertEquals(apellido, driver.findElement(By.name("last_name")).getAttribute("value"));
@@ -171,41 +171,41 @@ public class TC01_RegisterUser {
 	}
 	
 
-	@Test(description = "verify that the name and the last name is the same in the 'first name' and 'last name' box in the address section", priority = 13)
-	public void S010_NameAndLastnameValidation() {
+	@Test(description = "verify that the name and the last name is the same in the 'first name' and 'last name' box in the address section", priority = 12)
+	public void S012_NameAndLastnameValidation() {
 		Assert.assertEquals(nombre, driver.findElement(By.id("first_name")).getAttribute("value"));
 		Assert.assertEquals(apellido, driver.findElement(By.id("last_name")).getAttribute("value"));
 		Reporter.log("The name and the last name typed at the beginning of the form is shown<br>");
 	}
 
-	@Test(description = "Enter the company name in the 'company' box", priority = 14)
-	public void S011_CompanyValidation() {
+	@Test(description = "Enter the company name in the 'company' box", priority = 13)
+	public void S013_CompanyValidation() {
 		// company
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("javascript:window.scrollBy(250,550)");
+        js.executeScript("javascript:window.scrollBy(0,550)");
 		driver.findElement(By.id("company")).sendKeys("Prueba");
 		Assert.assertEquals("Prueba", driver.findElement(By.id("company")).getAttribute("value"));
 		Reporter.log("The company typed is shown<br>");
 	}
 
-	@Test(description = "Enter the address in the 'address' box", priority = 15)
-	public void S012_AdrressValidation() {
+	@Test(description = "Enter the address in the 'address' box", priority = 14)
+	public void S014_AdrressValidation() {
 		// address
 		driver.findElement(By.id("address1")).sendKeys("calle Test");
 		Assert.assertEquals("calle Test", driver.findElement(By.id("address1")).getAttribute("value"));
 		Reporter.log("The first address typed is shown<br>");
 	}
 
-	@Test(description = "enter a second address in the 'second address' box", priority = 16)
-	public void S013_SecondAddressValidation() {
+	@Test(description = "enter a second address in the 'second address' box", priority = 15)
+	public void S015_SecondAddressValidation() {
 		// address2
 		driver.findElement(By.id("address2")).sendKeys("calle Test2");
 		Assert.assertEquals("calle Test2", driver.findElement(By.id("address2")).getAttribute("value"));
 		Reporter.log("The second address typed is shown<br>");
 	}
 	
-	@Test(description = "select a country in the 'country' selector", priority = 17)
-	public void S014_CountrySelection() {
+	@Test(description = "select a country in the 'country' selector", priority = 16)
+	public void S016_CountrySelection() {
 		// Select Country
 		WebElement country = driver.findElement(By.id("country"));
 		Select select1 = new Select(country);
@@ -214,8 +214,8 @@ public class TC01_RegisterUser {
 		Reporter.log("The country selected is shown<br>");
 	}
 	
-	@Test(description = "select a state from the 'state' selector", priority = 18)
-	public void S015_StateSelection() {
+	@Test(description = "select a state from the 'state' selector", priority = 17)
+	public void S017_StateSelection() {
 		// State
 		driver.findElement(By.id("state")).sendKeys("Estado Prueba");
 		
@@ -223,8 +223,8 @@ public class TC01_RegisterUser {
 		Reporter.log("The state selected is shown<br>");
 	}
 
-	@Test(description = "enter a city in the 'city' box", priority = 19)
-	public void S016_CityValidation() {
+	@Test(description = "enter a city in the 'city' box", priority = 18)
+	public void S018_CityValidation() {
 		// city
 		driver.findElement(By.id("city")).sendKeys("Ciudad de Prueba");
 		Assert.assertEquals("Ciudad de Prueba", driver.findElement(By.id("city")).getAttribute("value"));
@@ -233,8 +233,8 @@ public class TC01_RegisterUser {
 
 	
 
-	@Test(description = "enter the ZIP code in the 'zip' box", priority = 20)
-	public void S017_ZIPValidation() {
+	@Test(description = "enter the ZIP code in the 'zip' box", priority = 19)
+	public void S019_ZIPValidation() {
 		// ZIP
 		driver.findElement(By.name("zipcode")).sendKeys("54321");
 		Assert.assertEquals("54321", driver.findElement(By.id("zipcode")).getAttribute("value"));
@@ -243,16 +243,16 @@ public class TC01_RegisterUser {
 
 	
 
-	@Test(description = "enter numbers in the 'mobile number' box", priority = 21)
-	public void S018_MobileNumberValidation() {
+	@Test(description = "enter numbers in the 'mobile number' box", priority = 20)
+	public void S020_MobileNumberValidation() {
 		// Mobile Number
 		driver.findElement(By.cssSelector("#mobile_number")).sendKeys("0987654321");
 		Assert.assertEquals("0987654321", driver.findElement(By.cssSelector("#mobile_number")).getAttribute("value"));
 		Reporter.log("The mobile number typed is shown<br>");
 	}
 	
-	@Test(description = "Click on Register button", priority = 22)
-	public void S019_ClickOnRegister() throws InterruptedException {
+	@Test(description = "Click on Register button", priority = 21)
+	public void S021_ClickOnRegister() throws InterruptedException {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(5))
 	       		  .pollingEvery(Duration.ofSeconds(1))
@@ -294,8 +294,8 @@ public class TC01_RegisterUser {
 		Assert.assertTrue(UserName.contains("ACCOUNT CREATED!"));
 		Reporter.log("The account is created<br>");
 	}
-	@Test(description = "Check the login name", priority = 23)
-	public void S020_LoginName() throws InterruptedException {
+	@Test(description = "Check the login name", priority = 22)
+	public void S022_LoginName() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;	
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		
@@ -311,11 +311,16 @@ public class TC01_RegisterUser {
 	Reporter.log("The name is showed<br>");
 	}
 	
-	@Test(description = "Delete Account", priority = 24)
-	public void S021_DeleteAccount() throws InterruptedException {
+	@Test(description = "Delete Account", priority = 23)
+	public void S023_DeleteAccount() throws InterruptedException {
 	
 	WebElement delete = driver.findElement(By.cssSelector("a[href='/delete_account']"));
 	delete.click();
+	try{ 
+		delete.click();
+	}catch (Exception e) {
+		// TODO: handle exception
+	}
 	WebElement promt = new WebDriverWait(driver, Duration.ofSeconds(10))
 			.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("h2[class='title text-center'] b")));
 	Assert.assertTrue(promt.getText().contains("ACCOUNT DELETED"));

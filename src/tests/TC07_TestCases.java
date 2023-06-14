@@ -47,7 +47,11 @@ public class TC07_TestCases {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("header[id='header'] li:nth-child(5) a:nth-child(1)")).click();
+		try {
 		driver.findElement(By.cssSelector("header[id='header'] li:nth-child(5) a:nth-child(1)")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(5))
 	       		  .pollingEvery(Duration.ofSeconds(1))

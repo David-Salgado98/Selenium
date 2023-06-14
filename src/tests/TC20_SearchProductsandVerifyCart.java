@@ -135,7 +135,11 @@ public class TC20_SearchProductsandVerifyCart {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		try {
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(5))
 	       		  .pollingEvery(Duration.ofSeconds(1))
@@ -185,11 +189,7 @@ public class TC20_SearchProductsandVerifyCart {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]/a[1]")));
 		
 		add.click();
-		try {
-			add.click();
-		}catch (Exception e) {
-			// TODO: handle exception
-		}
+		
 		
 		WebElement promt = new WebDriverWait(driver, Duration.ofSeconds(10))
 		.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".modal-title.w-100")));
@@ -200,9 +200,16 @@ public class TC20_SearchProductsandVerifyCart {
 	
 	@Test(description = "View Cart", priority = 9)
 	public void S009_ViewCart() {
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
-		WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+		try {
+		driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		 new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 		String text4 = driver.findElement(By.cssSelector("a[href='/product_details/28']")).getText();
 		Assert.assertTrue(text4.contains("Pure Cotton V-Neck T-Shirt"));
@@ -253,7 +260,7 @@ public class TC20_SearchProductsandVerifyCart {
 	public void S013_ViewCartAfterLogin() {
 		
 		driver.findElement(By.xpath("//body[1]/header[1]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[3]/a[1]")).click();
-		WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+		new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 		String text4 = driver.findElement(By.cssSelector("a[href='/product_details/28']")).getText();
 		Assert.assertTrue(text4.contains("Pure Cotton V-Neck T-Shirt"));

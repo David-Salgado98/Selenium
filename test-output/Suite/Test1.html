@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>23/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>22/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 14 00:42:22 CST 2023</td>
+<td>Started on:</td><td>Wed Jun 14 12:12:53 CST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>27 seconds (27755 ms)</td>
+<tr><td>Total time:</td><td>326 seconds (326435 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,105 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S023_DeleteAccount()'><b>S023_DeleteAccount</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Delete Account</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [085bd7866e695ae1f80ec1321a667fd9, clickElement {id=AF18949A7A324A3532D98CDEE25B7A70_element_102}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.111, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\DAVIDA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63148}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63148/devtoo..., se:cdpVersion: 114.0.5735.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (085bd7866e695ae1f80ec1321a667fd9)] -&gt; css selector: a[href=&apos;/delete_account&apos;]]
+Session ID: 085bd7866e695ae1f80ec1321a667fd9
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.TC01_RegisterUser.S023_DeleteAccount(TC01_RegisterUser.java:318)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 41 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace955061147", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace955061147'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [085bd7866e695ae1f80ec1321a667fd9, clickElement {id=AF18949A7A324A3532D98CDEE25B7A70_element_102}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.111, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\DAVIDA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63148}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63148/devtoo..., se:cdpVersion: 114.0.5735.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (085bd7866e695ae1f80ec1321a667fd9)] -&gt; css selector: a[href=&apos;/delete_account&apos;]]
+Session ID: 085bd7866e695ae1f80ec1321a667fd9
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.TC01_RegisterUser.S023_DeleteAccount(TC01_RegisterUser.java:318)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 41 more
+</pre></div></td>
+<td>180</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,59 +174,11 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.TC01_RegisterUser.S003_EnterEmailAdress()'><b>S003_EnterEmailAdress</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Type an email in the 'Email' box and click on 'create account' button<br/>
-<a href="#Output-1109461985" onClick='toggleBox("Output-1109461985", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1109461985" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1109461985">
-The form appears<br><br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S014_CountrySelection()'><b>S014_CountrySelection</b><br>Test class: tests.TC01_RegisterUser<br>Test method: select a country in the 'country' selector<br/>
-<a href="#Output-779051277" onClick='toggleBox("Output-779051277", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-779051277" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-779051277">
-The country selected is shown<br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S012_AdrressValidation()'><b>S012_AdrressValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Enter the address in the 'address' box<br/>
-<a href="#Output-409393797" onClick='toggleBox("Output-409393797", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-409393797" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-409393797">
-The first address typed is shown<br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S021_DeleteAccount()'><b>S021_DeleteAccount</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Delete Account<br/>
-<a href="#Output-585803886" onClick='toggleBox("Output-585803886", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-585803886" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-585803886">
-The account is deleted<br><br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
 <td title='tests.TC01_RegisterUser.S001_MainPage()'><b>S001_MainPage</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Go to the webpage<br/>
-<a href="#Output-2112373743" onClick='toggleBox("Output-2112373743", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-773518491" onClick='toggleBox("Output-773518491", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2112373743" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2112373743">
+<a href="#Output-773518491" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-773518491">
 The webpage loads correctly<br><br/>
 </div>
 </td>
@@ -135,83 +186,11 @@ The webpage loads correctly<br><br/>
 <td>3</td>
 <td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
 <tr>
-<td title='tests.TC01_RegisterUser.S011_CompanyValidation()'><b>S011_CompanyValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Enter the company name in the 'company' box<br/>
-<a href="#Output-178575564" onClick='toggleBox("Output-178575564", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-178575564" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-178575564">
-The company typed is shown<br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S009_LastNameVaidation()'><b>S009_LastNameVaidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: type the  last name un the ' last name' box<br/>
-<a href="#Output-333085360" onClick='toggleBox("Output-333085360", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-333085360" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-333085360">
-The lastname typed is shown<br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S006_Password()'><b>S006_Password</b><br>Test class: tests.TC01_RegisterUser<br>Test method: type the password un the 'password' box<br/>
-<a href="#Output-246745017" onClick='toggleBox("Output-246745017", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-246745017" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-246745017">
-The password typed is shown<br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S004_GenderSelection()'><b>S004_GenderSelection</b><br>Test class: tests.TC01_RegisterUser<br>Test method: select gender<br/>
-<a href="#Output-1568159144" onClick='toggleBox("Output-1568159144", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1568159144" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1568159144">
-The gender selected is checked <br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S007_BirthDateSelection()'><b>S007_BirthDateSelection</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Select the date of birth<br/>
-<a href="#Output-1605128733" onClick='toggleBox("Output-1605128733", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1605128733" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1605128733">
-The birth date selected is shown<br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S016_CityValidation()'><b>S016_CityValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: enter a city in the 'city' box<br/>
-<a href="#Output-1730900666" onClick='toggleBox("Output-1730900666", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1730900666" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1730900666">
-The city typed is shown<br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
 <td title='tests.TC01_RegisterUser.S005_EmailValidation()'><b>S005_EmailValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: check the mail<br/>
-<a href="#Output-203409962" onClick='toggleBox("Output-203409962", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1429462130" onClick='toggleBox("Output-1429462130", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-203409962" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-203409962">
+<a href="#Output-1429462130" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1429462130">
 The email typed at the beginning is shown<br><br/>
 </div>
 </td>
@@ -219,47 +198,35 @@ The email typed at the beginning is shown<br><br/>
 <td>0</td>
 <td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
 <tr>
-<td title='tests.TC01_RegisterUser.S013_SecondAddressValidation()'><b>S013_SecondAddressValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: enter a second address in the 'second address' box<br/>
-<a href="#Output-1428664849" onClick='toggleBox("Output-1428664849", this, "Show output", "Hide output");'>Show output</a>
+<td title='tests.TC01_RegisterUser.S016_CountrySelection()'><b>S016_CountrySelection</b><br>Test class: tests.TC01_RegisterUser<br>Test method: select a country in the 'country' selector<br/>
+<a href="#Output-512140711" onClick='toggleBox("Output-512140711", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1428664849" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1428664849">
-The second address typed is shown<br><br/>
+<a href="#Output-512140711" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-512140711">
+The country selected is shown<br><br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
 <td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
 <tr>
-<td title='tests.TC01_RegisterUser.S018_MobileNumberValidation()'><b>S018_MobileNumberValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: enter numbers in the 'mobile number' box<br/>
-<a href="#Output-553846997" onClick='toggleBox("Output-553846997", this, "Show output", "Hide output");'>Show output</a>
+<td title='tests.TC01_RegisterUser.S003_EnterEmailAdress()'><b>S003_EnterEmailAdress</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Type an email in the 'Email' box and click on 'create account' button<br/>
+<a href="#Output-515036017" onClick='toggleBox("Output-515036017", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-553846997" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-553846997">
-The mobile number typed is shown<br><br/>
+<a href="#Output-515036017" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-515036017">
+The form appears<br><br/>
 </div>
 </td>
 <td></td>
-<td>0</td>
+<td>3</td>
 <td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
 <tr>
-<td title='tests.TC01_RegisterUser.S009_SubscriptionNewsletter()'><b>S009_SubscriptionNewsletter</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Fill the Subscription Newsletter<br/>
-<a href="#Output-185583672" onClick='toggleBox("Output-185583672", this, "Show output", "Hide output");'>Show output</a>
+<td title='tests.TC01_RegisterUser.S012_NameAndLastnameValidation()'><b>S012_NameAndLastnameValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: verify that the name and the last name is the same in the 'first name' and 'last name' box in the address section<br/>
+<a href="#Output-959897458" onClick='toggleBox("Output-959897458", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-185583672" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-185583672">
-The newsletter is checked<br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S010_NameAndLastnameValidation()'><b>S010_NameAndLastnameValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: verify that the name and the last name is the same in the 'first name' and 'last name' box in the address section<br/>
-<a href="#Output-271514713" onClick='toggleBox("Output-271514713", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-271514713" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-271514713">
+<a href="#Output-959897458" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-959897458">
 The name and the last name typed at the beginning of the form is shown<br><br/>
 </div>
 </td>
@@ -267,71 +234,23 @@ The name and the last name typed at the beginning of the form is shown<br><br/>
 <td>0</td>
 <td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
 <tr>
-<td title='tests.TC01_RegisterUser.S017_ZIPValidation()'><b>S017_ZIPValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: enter the ZIP code in the 'zip' box<br/>
-<a href="#Output-1390430007" onClick='toggleBox("Output-1390430007", this, "Show output", "Hide output");'>Show output</a>
+<td title='tests.TC01_RegisterUser.S015_SecondAddressValidation()'><b>S015_SecondAddressValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: enter a second address in the 'second address' box<br/>
+<a href="#Output-1422883946" onClick='toggleBox("Output-1422883946", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1390430007" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1390430007">
-The ZIP code typed is shown<br><br/>
+<a href="#Output-1422883946" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1422883946">
+The second address typed is shown<br><br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
 <td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
 <tr>
-<td title='tests.TC01_RegisterUser.S002_LogInClick()'><b>S002_LogInClick</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Click on login button<br/>
-<a href="#Output-577037372" onClick='toggleBox("Output-577037372", this, "Show output", "Hide output");'>Show output</a>
+<td title='tests.TC01_RegisterUser.S009_SelectOffers()'><b>S009_SelectOffers</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Fill the Subscription Offers<br/>
+<a href="#Output-1973491942" onClick='toggleBox("Output-1973491942", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-577037372" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-577037372">
-The login page loads correctly<br><br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S020_LoginName()'><b>S020_LoginName</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Check the login name<br/>
-<a href="#Output-1680841335" onClick='toggleBox("Output-1680841335", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1680841335" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1680841335">
-The name is showed<br><br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S015_StateSelection()'><b>S015_StateSelection</b><br>Test class: tests.TC01_RegisterUser<br>Test method: select a state from the 'state' selector<br/>
-<a href="#Output-356005505" onClick='toggleBox("Output-356005505", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-356005505" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-356005505">
-The state selected is shown<br><br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S019_ClickOnRegister()'><b>S019_ClickOnRegister</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Click on Register button<br/>
-<a href="#Output-1241182310" onClick='toggleBox("Output-1241182310", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1241182310" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1241182310">
-The account is created<br><br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
-<tr>
-<td title='tests.TC01_RegisterUser.S010_SelectOffers()'><b>S010_SelectOffers</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Fill the Subscription Offers<br/>
-<a href="#Output-276777344" onClick='toggleBox("Output-276777344", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-276777344" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-276777344">
+<a href="#Output-1973491942" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1973491942">
 The offers checkbox is checked<br><br/>
 </div>
 </td>
@@ -339,12 +258,180 @@ The offers checkbox is checked<br><br/>
 <td>0</td>
 <td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
 <tr>
-<td title='tests.TC01_RegisterUser.S008_NameValidation()'><b>S008_NameValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: type the name un the 'name' box<br/>
-<a href="#Output-1954133542" onClick='toggleBox("Output-1954133542", this, "Show output", "Hide output");'>Show output</a>
+<td title='tests.TC01_RegisterUser.S017_StateSelection()'><b>S017_StateSelection</b><br>Test class: tests.TC01_RegisterUser<br>Test method: select a state from the 'state' selector<br/>
+<a href="#Output-1950246647" onClick='toggleBox("Output-1950246647", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1954133542" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1954133542">
+<a href="#Output-1950246647" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1950246647">
+The state selected is shown<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S019_ZIPValidation()'><b>S019_ZIPValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: enter the ZIP code in the 'zip' box<br/>
+<a href="#Output-1539827598" onClick='toggleBox("Output-1539827598", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1539827598" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1539827598">
+The ZIP code typed is shown<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S011_LastNameVaidation()'><b>S011_LastNameVaidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: type the  last name un the ' last name' box<br/>
+<a href="#Output-747004588" onClick='toggleBox("Output-747004588", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-747004588" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-747004588">
+The lastname typed is shown<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S004_GenderSelection()'><b>S004_GenderSelection</b><br>Test class: tests.TC01_RegisterUser<br>Test method: select gender<br/>
+<a href="#Output-1935689965" onClick='toggleBox("Output-1935689965", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1935689965" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1935689965">
+The gender selected is checked <br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S008_SubscriptionNewsletter()'><b>S008_SubscriptionNewsletter</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Fill the Subscription Newsletter<br/>
+<a href="#Output-60181881" onClick='toggleBox("Output-60181881", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-60181881" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-60181881">
+The newsletter is checked<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S020_MobileNumberValidation()'><b>S020_MobileNumberValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: enter numbers in the 'mobile number' box<br/>
+<a href="#Output-581383895" onClick='toggleBox("Output-581383895", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-581383895" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-581383895">
+The mobile number typed is shown<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S021_ClickOnRegister()'><b>S021_ClickOnRegister</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Click on Register button<br/>
+<a href="#Output-1872012709" onClick='toggleBox("Output-1872012709", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1872012709" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1872012709">
+The account is created<br><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S013_CompanyValidation()'><b>S013_CompanyValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Enter the company name in the 'company' box<br/>
+<a href="#Output-1018742990" onClick='toggleBox("Output-1018742990", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1018742990" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1018742990">
+The company typed is shown<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S018_CityValidation()'><b>S018_CityValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: enter a city in the 'city' box<br/>
+<a href="#Output-1998103567" onClick='toggleBox("Output-1998103567", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1998103567" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1998103567">
+The city typed is shown<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S022_LoginName()'><b>S022_LoginName</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Check the login name<br/>
+<a href="#Output-603183755" onClick='toggleBox("Output-603183755", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-603183755" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-603183755">
+The name is showed<br><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S002_LogInClick()'><b>S002_LogInClick</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Click on login button<br/>
+<a href="#Output-1005331061" onClick='toggleBox("Output-1005331061", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1005331061" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1005331061">
+The login page loads correctly<br><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S007_BirthDateSelection()'><b>S007_BirthDateSelection</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Select the date of birth<br/>
+<a href="#Output-951000054" onClick='toggleBox("Output-951000054", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-951000054" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-951000054">
+The birth date selected is shown<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S010_NameValidation()'><b>S010_NameValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: type the name un the 'name' box<br/>
+<a href="#Output-244229783" onClick='toggleBox("Output-244229783", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-244229783" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-244229783">
 The name typed is shown<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S006_Password()'><b>S006_Password</b><br>Test class: tests.TC01_RegisterUser<br>Test method: type the password un the 'password' box<br/>
+<a href="#Output-956856274" onClick='toggleBox("Output-956856274", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-956856274" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-956856274">
+The password typed is shown<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.TC01_RegisterUser@3c7f66c4</td></tr>
+<tr>
+<td title='tests.TC01_RegisterUser.S014_AdrressValidation()'><b>S014_AdrressValidation</b><br>Test class: tests.TC01_RegisterUser<br>Test method: Enter the address in the 'address' box<br/>
+<a href="#Output-1291485735" onClick='toggleBox("Output-1291485735", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1291485735" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1291485735">
+The first address typed is shown<br><br/>
 </div>
 </td>
 <td></td>

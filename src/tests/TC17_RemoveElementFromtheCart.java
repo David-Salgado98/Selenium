@@ -1,7 +1,6 @@
 package tests;
 
 import java.time.Duration;
-import java.util.Random;
 import java.util.function.Function;
 
 import org.openqa.selenium.By;
@@ -52,7 +51,11 @@ public class TC17_RemoveElementFromtheCart {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		driver.findElement(By.cssSelector("body")).click();
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		try {
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 	       		  .withTimeout(Duration.ofSeconds(5))
 	       		  .pollingEvery(Duration.ofSeconds(1))
@@ -114,7 +117,7 @@ public class TC17_RemoveElementFromtheCart {
 	public void S006_ViewCart() {
 		
 		driver.findElement(By.xpath("//u[normalize-space()='View Cart']")).click();
-		WebElement cart = new WebDriverWait(driver, Duration.ofSeconds(10))
+		new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-default.check_out")));
 		String text4 = driver.findElement(By.cssSelector("a[href='/product_details/1']")).getText();
 		Assert.assertTrue(text4.contains("Blue"));
@@ -140,7 +143,7 @@ public class TC17_RemoveElementFromtheCart {
 		product1.click();
 		Thread.sleep(2000);
 		try {
-		String nombre2 = driver.findElement(By.cssSelector("a[href='/product_details/2']")).getText();
+		 driver.findElement(By.cssSelector("a[href='/product_details/2']")).getText();
 		Assert.fail();
 		}catch (Exception e) {
 			Assert.assertTrue(true);

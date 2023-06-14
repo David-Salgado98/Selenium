@@ -110,7 +110,11 @@ public class TC02_LoginUser {
 				js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 				
 				driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+				try {
 				driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+				}catch (Exception e) {
+					// TODO: handle exception
+				}
 			WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
 					.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
 			Assert.assertTrue(name.getText().contains(nombre));
@@ -133,9 +137,16 @@ public class TC02_LoginUser {
 			@Test(description = "Go to Home", priority = 5)
 
 			public void S005_GoHome() throws InterruptedException {
-				
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 				driver.findElement(By.cssSelector("li:nth-child(1) a:nth-child(1)")).click();
-				WebElement login = new WebDriverWait(driver, Duration.ofSeconds(10))
+				try{ 
+					driver.findElement(By.cssSelector("li:nth-child(1) a:nth-child(1)")).click();
+				}catch (Exception e) {
+					// TODO: handle exception
+				
+				}
+				 new WebDriverWait(driver, Duration.ofSeconds(10))
 						
 						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/login']")));
 				Assert.assertEquals("FEATURES ITEMS", driver.findElement(By.cssSelector("div[class='features_items'] h2[class='title text-center']")).getText());
