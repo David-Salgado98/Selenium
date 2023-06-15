@@ -3,29 +3,25 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TC14_PlaceOrderWhileRigisterCheckout">
+      <class name="tests.TC15_PlaceOrderAlreadyRegister">
         <methods>
-          <include name="S009_ViewCart"/>
           <include name="S003_LoginName"/>
-          <include name="S014_VerifyItemsAfterLogin"/>
-          <include name="S012_Summary"/>
-          <include name="S013_ViewCartAfterLogin"/>
-          <include name="S018_ProcedToOrderComplete"/>
-          <include name="S016_VerifyTotal"/>
-          <include name="S019_DeleteAccount"/>
-          <include name="S000_FirstStep"/>
-          <include name="S006_AddToTheCart"/>
-          <include name="S005_ProductsClick"/>
-          <include name="S008_AddToTheCart2"/>
-          <include name="S010_VerifyItems"/>
-          <include name="S011_Summary"/>
-          <include name="S015_CartResume"/>
-          <include name="S007_ContinueShopping"/>
+          <include name="S008_ViewCart"/>
+          <include name="S011_VerifyTotal"/>
+          <include name="S013_ProcedToOrderComplete"/>
+          <include name="S010_Summary"/>
           <include name="AfterClass"/>
-          <include name="S017_Comment"/>
-          <include name="S004_Logout"/>
+          <include name="S002_CreateUser"/>
+          <include name="S014_DeleteAccount"/>
+          <include name="S012_Comment"/>
+          <include name="S007_AddToTheCart2"/>
+          <include name="S005_AddToTheCart"/>
+          <include name="S000_FirstStep"/>
+          <include name="S004_ProductsClick"/>
+          <include name="S009_VerifyItems"/>
+          <include name="S006_ContinueShopping"/>
         </methods>
-      </class> <!-- tests.TC14_PlaceOrderWhileRigisterCheckout -->
+      </class> <!-- tests.TC15_PlaceOrderAlreadyRegister -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

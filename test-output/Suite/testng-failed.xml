@@ -1,51 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test1(failed)">
-    <classes>
-      <class name="tests.TC01_RegisterUser">
-        <methods>
-          <include name="LastStep"/>
-          <include name="S000_BeforeTest"/>
-          <include name="S023_DeleteAccount"/>
-        </methods>
-      </class> <!-- tests.TC01_RegisterUser -->
-    </classes>
-  </test> <!-- Test1(failed) -->
-  <test thread-count="5" name="Test15(failed)">
-    <classes>
-      <class name="tests.TC15_PlaceOrderAlreadyRegister">
-        <methods>
-          <include name="S000_FirstStep"/>
-          <include name="S021_DeleteAccount"/>
-          <include name="AfterClass"/>
-          <include name="S011_ProcedToOrderComplete"/>
-        </methods>
-      </class> <!-- tests.TC15_PlaceOrderAlreadyRegister -->
-    </classes>
-  </test> <!-- Test15(failed) -->
-  <test thread-count="5" name="Test18(failed)">
-    <classes>
-      <class name="tests.TC18_ViewCategory">
-        <methods>
-          <include name="S005_ClickTshirt"/>
-          <include name="S003_ClickDress"/>
-          <include name="AfterClass"/>
-          <include name="S000_FirstStep"/>
-        </methods>
-      </class> <!-- tests.TC18_ViewCategory -->
-    </classes>
-  </test> <!-- Test18(failed) -->
   <test thread-count="5" name="Test23(failed)">
     <classes>
       <class name="tests.TC23_VerifyAddress">
         <methods>
-          <include name="S003_LoginName"/>
-          <include name="S009_CheckAddressInvoice"/>
+          <include name="S011_CheckAddressInvoice"/>
           <include name="AfterClass"/>
           <include name="S000_FirstStep"/>
-          <include name="S008_CheckAddressChekout"/>
-          <include name="S021_DeleteAccount"/>
+          <include name="S010_CheckAddressChekout"/>
+          <include name="S012_DeleteAccount"/>
         </methods>
       </class> <!-- tests.TC23_VerifyAddress -->
     </classes>

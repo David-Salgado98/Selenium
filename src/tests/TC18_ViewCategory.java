@@ -42,12 +42,12 @@ public class TC18_ViewCategory {
 	@Test(description = "GO to Women section", priority = 2)
 	public void S002_ClickWomen() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("javascript:window.scrollBy(250,250)");
-		
-		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		js.executeScript("javascript:window.scrollBy(0,250)");
 		driver.findElement(By.cssSelector("body")).click();
+		WebElement women = new WebDriverWait(driver, Duration.ofSeconds(10))
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[normalize-space()='Women']"))); 		
 		WebElement category = driver.findElement(By.xpath("//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-3']/div[@class='left-sidebar']/h2[1]"));
-		WebElement women = driver.findElement(By.xpath("//div[@class='panel-group category-products']//div[1]//div[1]//h4[1]"));
+	
 		women.click();										
 		try{ 
 			women.click();										
@@ -62,8 +62,11 @@ public class TC18_ViewCategory {
 	
 	@Test(description = "GO to Dress section", priority = 3)
 	public void S003_ClickDress() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		WebElement dress = new WebDriverWait(driver, Duration.ofSeconds(10))
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/category_products/1']"))); 
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='panel-collapse in']//li[1]//a[1]"))); 
 		dress.click();
 		try {
 		dress.click();

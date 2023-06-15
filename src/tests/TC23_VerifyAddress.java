@@ -235,6 +235,9 @@ public class TC23_VerifyAddress {
 	
 	@Test(description = "Delete Account", priority = 12)
 	public void S012_DeleteAccount() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		driver.findElement(By.cssSelector("body")).click();
 		WebElement delete = new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/delete_account']")));
 	

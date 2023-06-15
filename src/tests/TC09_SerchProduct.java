@@ -85,9 +85,15 @@ public class TC09_SerchProduct {
 		Reporter.log("Item searched matches with the item displayed <br>");
 	}
 	@AfterTest
-	public void LastStep() throws InterruptedException {
-		Thread.sleep(1000);
+	public void AfterClass() {
+		System.out.println("END");
+		// Script Ends and closes browser
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.close();
 	}
-	
 }

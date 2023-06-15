@@ -39,7 +39,7 @@ WebDriver driver = null;
 	}
 	
 	@Test(description = "Review Subscription Input", priority = 2)
-	public void S002_SuscriptionDisplay() {
+	public void S002_SuscriptionDisplay() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");

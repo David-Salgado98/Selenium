@@ -329,12 +329,16 @@ public class TC01_RegisterUser {
 	}
 	
 	@AfterTest
-	public void LastStep() throws InterruptedException {
+	public void AfterClass() {
 		System.out.println("END");
 		// Script Ends and closes browser
-		Thread.sleep(1000);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.close();
 	}
-
 
 }

@@ -108,7 +108,11 @@ public class TC20_SearchProductsandVerifyCart {
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		
 		driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+		try {
 		driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		WebElement name = new WebDriverWait(driver, Duration.ofSeconds(10))
 			.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li:nth-child(10) a:nth-child(1)")));
 		Assert.assertTrue(name.getText().contains("Logged in as "+nombre));
@@ -173,10 +177,11 @@ public class TC20_SearchProductsandVerifyCart {
 		
 		driver.findElement(By.id("search_product")).sendKeys("Pure Cotton V-Neck T-Shirt");
 		driver.findElement(By.id("submit_search")).click();
-		WebElement product = new WebDriverWait(driver, Duration.ofSeconds(5))
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='productinfo text-center']//p[contains(text(),'Pure Cotton V-Neck T-Shirt')]")));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("javascript:window.scrollBy(250,550)");
+		js.executeScript("javascript:window.scrollBy(0,550)");
+		WebElement product = new WebDriverWait(driver, Duration.ofSeconds(5))
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='productinfo text-center']//p[contains(text(),'Pure Cotton V-Neck T-Shirt')]")));
+		
 		
 		Assert.assertTrue(product.getText().contains("Cotton"));
 		Reporter.log("Item searched matches with the item displayed <br>");
@@ -281,8 +286,15 @@ public class TC20_SearchProductsandVerifyCart {
 	
 	
 	@AfterTest
-	public void LastStep() throws InterruptedException {
-		Thread.sleep(1000);
+	public void AfterClass() {
+		System.out.println("END");
+		// Script Ends and closes browser
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.close();
 	}
 }

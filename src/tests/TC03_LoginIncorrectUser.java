@@ -91,10 +91,15 @@ public class TC03_LoginIncorrectUser {
 	}
 	
 	@AfterTest
-	public void LastStep() throws InterruptedException {
+	public void AfterClass() {
 		System.out.println("END");
 		// Script Ends and closes browser
-		Thread.sleep(3000);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.close();
 	}
 	
